@@ -1,0 +1,10 @@
+abi_version=1.8.0
+builtins_platform=JS
+compiler_version=1.9.23
+depends=com.varabyte.kobweb\:kobweb-silk com.varabyte.kobweb\:kobweb-core com.varabyte.kobwebx\:silk-icons-fa org.jetbrains.compose.runtime\:runtime org.jetbrains.compose.html\:html-core com.varabyte.kobweb\:silk-widgets-kobweb com.varabyte.kobweb\:silk-widgets com.varabyte.kobweb\:silk-foundation com.varabyte.kobweb\:kobweb-compose com.varabyte.kobweb\:compose-html-ext com.varabyte.kobweb\:kobweb-worker-interface com.varabyte.kobweb\:browser-ext org.jetbrains.compose.html\:internal-html-core-runtime org.jetbrains.kotlin\:kotlin-dom-api-compat org.jetbrains.kotlinx\:kotlinx-coroutines-core org.jetbrains.kotlinx\:atomicfu kotlin org.jetbrains.kotlin\:kotlinx-atomicfu-runtime
+ir_signature_versions=1,2
+jsOutputName=blogmultiplatform
+metadata_version=1.4.1
+serializedIrFileFingerprints=3n1spex4fh9mb.391byk108w0w9 1tjifxqk9b2xl.no8hocq4i86s 7qddxo0nqa5d.2zt366j22ww4n
+serializedKlibFingerprint=328on9thwd1fi.3vnjrgsthdlm
+unique_name=com.example.blogmultiplatform\:site

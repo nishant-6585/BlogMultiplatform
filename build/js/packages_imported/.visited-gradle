@@ -1,0 +1,79 @@
+{
+  "version": "9",
+  "items": {
+    "b83a16b8c8abee8cc772df4c102c795d": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-js/1.9.23/69fa6e9066cb370b7435f54b456ef055c55d5e65/kotlin-stdlib-js-1.9.23.klib"
+    },
+    "3da937e110ad8ea82a97ae6495c6d07f": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.runtime/runtime-js/1.6.2/7df46fa6b78aecf9811595c3016ab4b4ae49f12/runtime-js-1.6.2.klib"
+    },
+    "7863099849b1ae49e070fccd37807533": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.collection-internal/collection-js/1.6.2/e28bbce3d18fee707bf4579719dd2d98e4a59291/collection-js-1.6.2.klib"
+    },
+    "3a35b2fb850d3139a41cf98f108b6480": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.annotation-internal/annotation-js/1.6.2/c907e8a1049deda59de980941fb74c5eb6b79d68/annotation-js-1.6.2.klib"
+    },
+    "b50857453dcb30a49d765d6aca822dfe": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-dom-api-compat/1.9.23/3c0ac04445c1aeec4366d69e1791cd6ad31ddc07/kotlin-dom-api-compat-1.9.23.klib"
+    },
+    "ba8177ecda3981427862b37308d71b44": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/atomicfu-js/0.23.2/e19f377f0dc24137414f5f3e1be730f60aeb9539/atomicfu-js-0.23.2.klib"
+    },
+    "5f460de879b1311463aa4ad821c02375": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-js/1.8.0/15c3b0e757e1e31196d82616f47e66df3ecd7d5b/kotlinx-coroutines-core-js-1.8.0.klib"
+    },
+    "e9306c2451bbe8784372b11cb78554d0": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlinx-atomicfu-runtime/1.9.23/373f8846d435f6e7f77453cefbb97c548ae4781e/kotlinx-atomicfu-runtime-1.9.23.klib"
+    },
+    "6fa62b73ffa0904eba15ea87c9a7346e": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.html/html-core-js/1.6.2/4617b7cb1fafb28566755c408d19173c4fc27a13/html-core-js-1.6.2.klib",
+      "target": "html-core-js/1.6.2"
+    },
+    "5cfe4cfbcd6f15f29faebd70d2133e7a": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.html/internal-html-core-runtime-js/1.6.2/eb60e3896fd1c291da31f50c44136065d0260c24/internal-html-core-runtime-js-1.6.2.klib"
+    },
+    "34973acb9914af9197663a046347b62f": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/kobweb-core/0.18.0/6e9fab9a21044ed13dea61d4d73852cb59d1eb07/kobweb-core-js-0.18.0.klib"
+    },
+    "54e4a8f3ef593e987224d8f0361ca3b4": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/compose-html-ext/0.18.0/eb05e7ee2e602300edac7d93c390530883790bf1/compose-html-ext-js-0.18.0.klib"
+    },
+    "1daa0cff58a0bafee28f7b982a636dcc": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/browser-ext/0.18.0/bb65228b4e5053b0c03dea650923f4bed623c95c/browser-ext-js-0.18.0.klib"
+    },
+    "cf24d6a06127ee434bffb5ce6a5eb097": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/kobweb-worker-interface/0.18.0/9ab151879534ce06ff795dd4021192fc6e9bf48d/kobweb-worker-interface-js-0.18.0.klib"
+    },
+    "0ffdceb4847380e2dcfbd909170a9a1d": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-json-js/1.6.0/8da0ad64ba616b5274fc5cdc07656912e1eea71d/kotlinx-serialization-json-js-1.6.0.klib"
+    },
+    "d356df8ed21c63fbacf8d7ef87b6eaa0": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-core-js/1.6.0/bb589ecd997c9b459f15b06ff4639bc6cabf522d/kotlinx-serialization-core-js-1.6.0.klib"
+    },
+    "a2ad69cb6ebb2164c5552d0eb9d41f50": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/kobweb-client-server-internal-js/0.18.0/2c0bd5cc83537519b20ab4d5ca7507331576e9c8/client-server-internal-js-0.18.0.klib"
+    },
+    "a04054b435b14f7b19ef37517e22afd9": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/kobweb-silk/0.18.0/c5e69479a52ead676a46032ed7add0fc25d123ba/kobweb-silk-js-0.18.0.klib"
+    },
+    "770c3c9f27f1bb22d9957d95175d6fce": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/silk-widgets-kobweb/0.18.0/1f77f292063b7b45f37bc7f5a3812d2ed0b601f8/silk-widgets-kobweb-js-0.18.0.klib"
+    },
+    "0601f6417868d55343de3bbebd4949b3": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/silk-widgets/0.18.0/7b2501de1e457c37d3051030e46e91da4e74dfb8/silk-widgets-js-0.18.0.klib"
+    },
+    "395a8066031eac5b6234ba502c3939f5": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/silk-foundation/0.18.0/c01b2e1955234f42d4638207c2a1a07def2de41f/silk-foundation-js-0.18.0.klib"
+    },
+    "7921f87e245e72cfe6defefe692f7c51": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/kobweb-compose/0.18.0/4f2682936de6e6d823765cb9d41df91a8ff1304b/kobweb-compose-js-0.18.0.klib"
+    },
+    "44bde768fce35c185eadbe2efd750e9c": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/com.varabyte.kobwebx/silk-icons-fa/0.18.0/42cc77fb37f2fd179556ad8c00222e41646342ac/silk-icons-fa-js-0.18.0.klib"
+    },
+    "a66860f155cb10a237acb5f7d0f6d0e3": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-js-runner/1.9.23/e9b1fc55af69eb09d63b271d17c217d9483241cc/kotlin-test-js-runner-1.9.23.jar",
+      "target": "kotlin-test-js-runner/0.0.1"
+    }
+  }
+}

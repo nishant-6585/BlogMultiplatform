@@ -1,0 +1,17 @@
+{
+  "name": "blogmultiplatform",
+  "version": "unspecified",
+  "private": true,
+  "workspaces": [
+    "packages/blogmultiplatform",
+    "packages/blogmultiplatform-test",
+    "packages_imported/html-core-js/1.6.2",
+    "packages_imported/kotlin-test-js-runner/0.0.1"
+  ],
+  "devDependencies": {},
+  "dependencies": {},
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": [],
+  "resolutions": {}
+}

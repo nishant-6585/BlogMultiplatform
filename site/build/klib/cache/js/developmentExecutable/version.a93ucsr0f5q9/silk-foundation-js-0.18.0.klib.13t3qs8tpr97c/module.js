@@ -1,8 +1,8 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd)
-    define(['exports', './compose-multiplatform-core-compose-runtime-runtime.js', './kotlin-kotlin-stdlib.js', './kobweb-frontend-kobweb-compose.js', './html-html-core.js', './kobweb-frontend-browser-ext.js', './kobweb-frontend-compose-html-ext.js'], factory);
+    define(['exports', './compose-multiplatform-core-compose-runtime-runtime.js', './kotlin-kotlin-stdlib.js', './kobweb-frontend-kobweb-compose.js', './html-html-core.js', './kobweb-frontend-compose-html-ext.js', './kobweb-frontend-browser-ext.js'], factory);
   else if (typeof exports === 'object')
-    factory(module.exports, require('./compose-multiplatform-core-compose-runtime-runtime.js'), require('./kotlin-kotlin-stdlib.js'), require('./kobweb-frontend-kobweb-compose.js'), require('./html-html-core.js'), require('./kobweb-frontend-browser-ext.js'), require('./kobweb-frontend-compose-html-ext.js'));
+    factory(module.exports, require('./compose-multiplatform-core-compose-runtime-runtime.js'), require('./kotlin-kotlin-stdlib.js'), require('./kobweb-frontend-kobweb-compose.js'), require('./html-html-core.js'), require('./kobweb-frontend-compose-html-ext.js'), require('./kobweb-frontend-browser-ext.js'));
   else {
     if (typeof this['compose-multiplatform-core-compose-runtime-runtime'] === 'undefined') {
       throw new Error("Error loading module 'kobweb-frontend-silk-foundation'. Its dependency 'compose-multiplatform-core-compose-runtime-runtime' was not found. Please, check whether 'compose-multiplatform-core-compose-runtime-runtime' is loaded prior to 'kobweb-frontend-silk-foundation'.");
@@ -16,28 +16,28 @@
     if (typeof this['html-html-core'] === 'undefined') {
       throw new Error("Error loading module 'kobweb-frontend-silk-foundation'. Its dependency 'html-html-core' was not found. Please, check whether 'html-html-core' is loaded prior to 'kobweb-frontend-silk-foundation'.");
     }
-    if (typeof this['kobweb-frontend-browser-ext'] === 'undefined') {
-      throw new Error("Error loading module 'kobweb-frontend-silk-foundation'. Its dependency 'kobweb-frontend-browser-ext' was not found. Please, check whether 'kobweb-frontend-browser-ext' is loaded prior to 'kobweb-frontend-silk-foundation'.");
-    }
     if (typeof this['kobweb-frontend-compose-html-ext'] === 'undefined') {
       throw new Error("Error loading module 'kobweb-frontend-silk-foundation'. Its dependency 'kobweb-frontend-compose-html-ext' was not found. Please, check whether 'kobweb-frontend-compose-html-ext' is loaded prior to 'kobweb-frontend-silk-foundation'.");
     }
-    root['kobweb-frontend-silk-foundation'] = factory(typeof this['kobweb-frontend-silk-foundation'] === 'undefined' ? {} : this['kobweb-frontend-silk-foundation'], this['compose-multiplatform-core-compose-runtime-runtime'], this['kotlin-kotlin-stdlib'], this['kobweb-frontend-kobweb-compose'], this['html-html-core'], this['kobweb-frontend-browser-ext'], this['kobweb-frontend-compose-html-ext']);
+    if (typeof this['kobweb-frontend-browser-ext'] === 'undefined') {
+      throw new Error("Error loading module 'kobweb-frontend-silk-foundation'. Its dependency 'kobweb-frontend-browser-ext' was not found. Please, check whether 'kobweb-frontend-browser-ext' is loaded prior to 'kobweb-frontend-silk-foundation'.");
+    }
+    root['kobweb-frontend-silk-foundation'] = factory(typeof this['kobweb-frontend-silk-foundation'] === 'undefined' ? {} : this['kobweb-frontend-silk-foundation'], this['compose-multiplatform-core-compose-runtime-runtime'], this['kotlin-kotlin-stdlib'], this['kobweb-frontend-kobweb-compose'], this['html-html-core'], this['kobweb-frontend-compose-html-ext'], this['kobweb-frontend-browser-ext']);
   }
-}(this, function (_, kotlin_org_jetbrains_compose_runtime_runtime, kotlin_kotlin, kotlin_com_varabyte_kobweb_kobweb_compose, kotlin_org_jetbrains_compose_html_html_core, kotlin_com_varabyte_kobweb_browser_ext, kotlin_com_varabyte_kobweb_compose_html_ext) {
+}(this, function (_, kotlin_org_jetbrains_compose_runtime_runtime, kotlin_kotlin, kotlin_com_varabyte_kobweb_kobweb_compose, kotlin_org_jetbrains_compose_html_html_core, kotlin_com_varabyte_kobweb_compose_html_ext, kotlin_com_varabyte_kobweb_browser_ext) {
   'use strict';
   //region block: imports
   var imul = Math.imul;
   var Companion_getInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g1;
-  var THROW_CCE = kotlin_kotlin.$_$.qe;
+  var THROW_CCE = kotlin_kotlin.$_$.re;
   var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.z;
   var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.r;
   var Unit_getInstance = kotlin_kotlin.$_$.l4;
-  var KobwebComposeStyleSheet_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.k2;
-  var Style = kotlin_org_jetbrains_compose_html_html_core.$_$.y4;
+  var KobwebComposeStyleSheet_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.r2;
+  var Style = kotlin_org_jetbrains_compose_html_html_core.$_$.k5;
   var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y;
   var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a1;
-  var StyleSheet = kotlin_org_jetbrains_compose_html_html_core.$_$.d3;
+  var StyleSheet = kotlin_org_jetbrains_compose_html_html_core.$_$.j3;
   var VOID = kotlin_kotlin.$_$.e;
   var StyleSheet_init_$Init$ = kotlin_org_jetbrains_compose_html_html_core.$_$.a;
   var protoOf = kotlin_kotlin.$_$.ob;
@@ -47,28 +47,37 @@
   var collectionSizeOrDefault = kotlin_kotlin.$_$.a6;
   var ArrayList_init_$Create$ = kotlin_kotlin.$_$.j;
   var distinct = kotlin_kotlin.$_$.q6;
-  var lazy = kotlin_kotlin.$_$.lf;
+  var lazy = kotlin_kotlin.$_$.mf;
   var classMeta = kotlin_kotlin.$_$.ea;
   var KProperty1 = kotlin_kotlin.$_$.fc;
   var getPropertyCallableRef = kotlin_kotlin.$_$.ma;
-  var Companion_getInstance_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.q2;
+  var Companion_getInstance_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.y2;
   var objectCreate = kotlin_kotlin.$_$.mb;
   var charSequenceLength = kotlin_kotlin.$_$.da;
   var toString = kotlin_kotlin.$_$.rb;
   var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.m1;
-  var interfaceMeta = kotlin_kotlin.$_$.qa;
-  var ArrayList_init_$Create$_0 = kotlin_kotlin.$_$.k;
-  var mutableStateListOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s;
+  var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.f2;
+  var endsWith = kotlin_kotlin.$_$.sc;
+  var startsWith = kotlin_kotlin.$_$.ld;
+  var Companion_getInstance_1 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.t2;
+  var whiteSpace = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.l2;
+  var toAttrs = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.o2;
   var composableLambda = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b;
   var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w;
+  var Span = kotlin_org_jetbrains_compose_html_html_core.$_$.j5;
+  var interfaceMeta = kotlin_kotlin.$_$.qa;
+  var registerRefScope = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.c2;
+  var Text = kotlin_org_jetbrains_compose_html_html_core.$_$.l5;
+  var ArrayList_init_$Create$_0 = kotlin_kotlin.$_$.k;
+  var mutableStateListOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s;
   var CompositionLocalProvider = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d;
   var composableLambdaInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a;
   var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.r1;
   var staticCompositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.x;
-  var to = kotlin_kotlin.$_$.uf;
+  var to = kotlin_kotlin.$_$.vf;
   var invokeLater = kotlin_com_varabyte_kobweb_browser_ext.$_$.b;
   var toSet = kotlin_kotlin.$_$.x8;
-  var asList = kotlin_kotlin.$_$.wf;
+  var asList = kotlin_kotlin.$_$.xf;
   var addAll = kotlin_kotlin.$_$.q5;
   var plus = kotlin_kotlin.$_$.x7;
   var joinToString = kotlin_kotlin.$_$.e7;
@@ -82,62 +91,59 @@
   var mapCapacity = kotlin_kotlin.$_$.o7;
   var LinkedHashMap_init_$Create$_0 = kotlin_kotlin.$_$.s;
   var UnsupportedOperationException_init_$Create$ = kotlin_kotlin.$_$.b2;
-  var ComparableAttrsScope_init_$Create$ = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.y1;
-  var toAttrs = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.i2;
-  var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.f2;
-  var trimMargin = kotlin_kotlin.$_$.wd;
-  var media = kotlin_org_jetbrains_compose_html_html_core.$_$.h4;
-  var layer = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.f1;
-  var isNotEmpty = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.c1;
+  var ComparableAttrsScope_init_$Create$ = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.d2;
+  var trimMargin = kotlin_kotlin.$_$.xd;
+  var media = kotlin_org_jetbrains_compose_html_html_core.$_$.o4;
+  var layer = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.i1;
+  var isNotEmpty = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.f1;
   var mutableListOf = kotlin_kotlin.$_$.s7;
   var plus_1 = kotlin_kotlin.$_$.v7;
   var ComparableStyleScope = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.b;
-  var toStyles = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.j2;
+  var toStyles = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.p2;
   var equals = kotlin_kotlin.$_$.ha;
-  var substringAfterLast = kotlin_kotlin.$_$.ld;
+  var substringAfterLast = kotlin_kotlin.$_$.md;
   var hashCode = kotlin_kotlin.$_$.oa;
-  var endsWith = kotlin_kotlin.$_$.sc;
+  var endsWith_0 = kotlin_kotlin.$_$.tc;
   var copyToArray = kotlin_kotlin.$_$.p6;
-  var classNames = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.q;
+  var classNames = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.t;
   var getValue = kotlin_kotlin.$_$.a7;
   var toList = kotlin_kotlin.$_$.s8;
   var getStringHashCode = kotlin_kotlin.$_$.na;
-  var isBlank = kotlin_kotlin.$_$.wc;
-  var first = kotlin_kotlin.$_$.tc;
-  var Char = kotlin_kotlin.$_$.de;
+  var isBlank = kotlin_kotlin.$_$.xc;
+  var first = kotlin_kotlin.$_$.uc;
+  var Char = kotlin_kotlin.$_$.ee;
   var setOf = kotlin_kotlin.$_$.d8;
-  var From_getInstance = kotlin_org_jetbrains_compose_html_html_core.$_$.e;
-  var To_getInstance = kotlin_org_jetbrains_compose_html_html_core.$_$.f;
-  var Percentage = kotlin_org_jetbrains_compose_html_html_core.$_$.n2;
-  var Combine = kotlin_org_jetbrains_compose_html_html_core.$_$.m2;
-  var StyleScopeBuilder = kotlin_org_jetbrains_compose_html_html_core.$_$.b3;
-  var CSSKeyframeRuleDeclaration = kotlin_org_jetbrains_compose_html_html_core.$_$.o2;
-  var CSSKeyframesRuleDeclaration = kotlin_org_jetbrains_compose_html_html_core.$_$.p2;
-  var THROW_IAE = kotlin_kotlin.$_$.re;
+  var From_getInstance = kotlin_org_jetbrains_compose_html_html_core.$_$.g;
+  var To_getInstance = kotlin_org_jetbrains_compose_html_html_core.$_$.h;
+  var Percentage = kotlin_org_jetbrains_compose_html_html_core.$_$.t2;
+  var Combine = kotlin_org_jetbrains_compose_html_html_core.$_$.s2;
+  var StyleScopeBuilder = kotlin_org_jetbrains_compose_html_html_core.$_$.h3;
+  var CSSKeyframeRuleDeclaration = kotlin_org_jetbrains_compose_html_html_core.$_$.u2;
+  var CSSKeyframesRuleDeclaration = kotlin_org_jetbrains_compose_html_html_core.$_$.v2;
+  var THROW_IAE = kotlin_kotlin.$_$.se;
   var enumEntries = kotlin_kotlin.$_$.u9;
-  var Enum = kotlin_kotlin.$_$.fe;
-  var Raw = kotlin_org_jetbrains_compose_html_html_core.$_$.r2;
-  var Companion_getInstance_1 = kotlin_org_jetbrains_compose_html_html_core.$_$.h;
-  var display = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.t;
+  var Enum = kotlin_kotlin.$_$.ge;
+  var Raw = kotlin_org_jetbrains_compose_html_html_core.$_$.x2;
+  var Companion_getInstance_2 = kotlin_org_jetbrains_compose_html_html_core.$_$.j;
+  var display = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.w;
   var numberToDouble = kotlin_kotlin.$_$.kb;
-  var get_px = kotlin_org_jetbrains_compose_html_html_core.$_$.p4;
-  var removeSuffix = kotlin_kotlin.$_$.dd;
-  var toIntOrNull = kotlin_kotlin.$_$.qd;
-  var trimIndent = kotlin_kotlin.$_$.vd;
+  var get_px = kotlin_org_jetbrains_compose_html_html_core.$_$.w4;
+  var removeSuffix = kotlin_kotlin.$_$.ed;
+  var toIntOrNull = kotlin_kotlin.$_$.rd;
+  var trimIndent = kotlin_kotlin.$_$.wd;
   var getKClass = kotlin_kotlin.$_$.c;
-  var get_cssRem = kotlin_org_jetbrains_compose_html_html_core.$_$.q3;
-  var startsWith = kotlin_kotlin.$_$.kd;
+  var get_cssRem = kotlin_org_jetbrains_compose_html_html_core.$_$.w3;
   var LinkedHashSet_init_$Create$ = kotlin_kotlin.$_$.v;
-  var MediaFeature = kotlin_org_jetbrains_compose_html_html_core.$_$.q2;
-  var noWhenBranchMatchedException = kotlin_kotlin.$_$.mf;
+  var MediaFeature = kotlin_org_jetbrains_compose_html_html_core.$_$.w2;
+  var noWhenBranchMatchedException = kotlin_kotlin.$_$.nf;
   var sourceInformationMarkerStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.v;
   var sourceInformationMarkerEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u;
   var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.t;
   var KProperty0 = kotlin_kotlin.$_$.ec;
   var compositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.p;
-  var Companion_getInstance_2 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.l2;
-  var ensureNotNull = kotlin_kotlin.$_$.jf;
-  var styleModifier = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.h2;
+  var Companion_getInstance_3 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.s2;
+  var ensureNotNull = kotlin_kotlin.$_$.kf;
+  var styleModifier = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.n2;
   //endregion
   //region block: pre-declaration
   setMetadataFor(SilkStyleSheet, 'SilkStyleSheet', objectMeta, StyleSheet);
@@ -424,18 +430,18 @@
     return distinct(destination).get_size_woubt6_k$() === 1;
   };
   var Companion_instance;
-  function Companion_getInstance_3() {
+  function Companion_getInstance_4() {
     if (Companion_instance == null)
       new Companion();
     return Companion_instance;
   }
   function Keyframes$usesColorMode$delegate$lambda(this$0) {
     return function () {
-      return !Companion_getInstance_3().isColorModeAgnostic_xlmfaa_k$(this$0.init_1);
+      return !Companion_getInstance_4().isColorModeAgnostic_xlmfaa_k$(this$0.init_1);
     };
   }
   function Keyframes(name, prefix, init) {
-    Companion_getInstance_3();
+    Companion_getInstance_4();
     prefix = prefix === VOID ? null : prefix;
     this.init_1 = init;
     var tmp = this;
@@ -486,7 +492,7 @@
     Companion_instance_0 = this;
   }
   var Companion_instance_0;
-  function Companion_getInstance_4() {
+  function Companion_getInstance_5() {
     if (Companion_instance_0 == null)
       new Companion_0();
     return Companion_instance_0;
@@ -530,7 +536,7 @@
     };
   }
   function ComponentStyle(name, extraModifiers, prefix, init) {
-    Companion_getInstance_4();
+    Companion_getInstance_5();
     prefix = prefix === VOID ? null : prefix;
     this.extraModifiers_1 = extraModifiers;
     this.prefix_1 = prefix;
@@ -653,11 +659,125 @@
     return SpanTextStyle;
   }
   var SpanTextStyle;
+  function SpanText(text, modifier, variant, ref, $composer, $changed, $default) {
+    _init_properties_SpanText_kt__upt1hl();
+    var modifier_0 = {_v: modifier};
+    var variant_0 = {_v: variant};
+    var ref_0 = {_v: ref};
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-1400383509);
+    var $dirty = $changed;
+    if (!(($default & 1) === 0))
+      $dirty = $dirty | 6;
+    else if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(text) ? 4 : 2);
+    if (!(($default & 2) === 0))
+      $dirty = $dirty | 16;
+    if (!(($default & 4) === 0))
+      $dirty = $dirty | 384;
+    else if (($changed & 896) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(variant_0._v) ? 256 : 128);
+    if (!(($default & 8) === 0))
+      $dirty = $dirty | 3072;
+    else if (($changed & 7168) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(ref_0._v) ? 2048 : 1024);
+    if (!(($default & 2) === 2) ? true : !(($dirty & 5851) === 1170) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (!(($default & 2) === 0)) {
+        modifier_0._v = Companion_getInstance_0();
+      }
+      if (!(($default & 4) === 0)) {
+        variant_0._v = null;
+      }
+      if (!(($default & 8) === 0)) {
+        ref_0._v = null;
+      }
+      if (isTraceInProgress()) {
+        traceEventStart(-1400383509, $dirty, -1, 'com.varabyte.kobweb.silk.components.text.SpanText (SpanText.kt:52)');
+      }
+      // Inline function 'com.varabyte.kobweb.compose.ui.thenIf' call
+      var this_0 = toModifier_0(get_SpanTextStyle(), [variant_0._v], $composer_0, 6).then_mmfvo6_k$(modifier_0._v);
+      var tmp;
+      if (startsWith(text, _Char___init__impl__6a9atx(32)) ? true : endsWith(text, _Char___init__impl__6a9atx(32))) {
+        // Inline function 'com.varabyte.kobweb.silk.components.text.SpanText.<anonymous>' call
+        tmp = whiteSpace(Companion_getInstance_0(), Companion_getInstance_1().get_PreWrap_nintz8_k$());
+      } else {
+        tmp = Companion_getInstance_0();
+      }
+      var finalModifier = this_0.then_mmfvo6_k$(tmp);
+      var tmp_0 = toAttrs(finalModifier);
+      // Inline function 'kotlin.run' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'com.varabyte.kobweb.silk.components.text.SpanText.<anonymous>' call
+      var tmp_1 = $composer_0;
+      var dispatchReceiver = composableLambda(tmp_1, 262293193, true, SpanText$lambda(ref_0, text));
+      // Inline function 'androidx.compose.runtime.remember' call
+      var $composer_1 = $composer_0;
+      $composer_1.startReplaceableGroup_ip860b_k$(1157296644);
+      sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
+      // Inline function 'androidx.compose.runtime.cache' call
+      var invalid = $composer_1.changed_ga7h3f_k$(dispatchReceiver);
+      // Inline function 'kotlin.let' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var it = $composer_1.rememberedValue_4dg93v_k$();
+      var tmp_2;
+      if (invalid ? true : it === Companion_getInstance().get_Empty_i9b85g_k$()) {
+        // Inline function 'com.varabyte.kobweb.silk.components.text.SpanText.<anonymous>.<anonymous>' call
+        var value = ComposableLambda$invoke$ref(dispatchReceiver);
+        $composer_1.updateRememberedValue_l1wh71_k$(value);
+        tmp_2 = value;
+      } else {
+        tmp_2 = it;
+      }
+      var tmp_3 = tmp_2;
+      var tmp0 = (tmp_3 == null ? true : !(tmp_3 == null)) ? tmp_3 : THROW_CCE();
+      $composer_1.endReplaceableGroup_ern0ak_k$();
+      Span(tmp_0, tmp0, $composer_0, 48, 0);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_t8jcf_k$(SpanText$lambda_0(text, modifier_0, variant_0, ref_0, $changed, $default));
+    }
+  }
   function SpanTextKind() {
   }
   function SpanTextStyle$lambda($this$CssStyle) {
     _init_properties_SpanText_kt__upt1hl();
     return Unit_getInstance();
+  }
+  function SpanText$lambda($ref, $text) {
+    return function ($this$Span, $composer, $changed) {
+      var $composer_0 = $composer;
+      if (isTraceInProgress()) {
+        traceEventStart(262293193, $changed, -1, 'com.varabyte.kobweb.silk.components.text.SpanText.<anonymous> (SpanText.kt:61)');
+      }
+      registerRefScope($this$Span, $ref._v, $composer_0, 72);
+      Text($text, $composer_0, 0);
+      var tmp;
+      if (isTraceInProgress()) {
+        traceEventEnd();
+        tmp = Unit_getInstance();
+      }
+      return Unit_getInstance();
+    };
+  }
+  function ComposableLambda$invoke$ref($boundThis) {
+    return function (p0, p1, p2) {
+      return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
+    };
+  }
+  function SpanText$lambda_0($text, $modifier, $variant, $ref, $$changed, $$default) {
+    return function ($composer, $force) {
+      SpanText($text, $modifier._v, $variant._v, $ref._v, $composer, updateChangedFlags($$changed | 1), $$default);
+      return Unit_getInstance();
+    };
   }
   var properties_initialized_SpanText_kt_kccny1;
   function _init_properties_SpanText_kt__upt1hl() {
@@ -805,7 +925,7 @@
       var tmp_1;
       if (invalid ? true : it === Companion_getInstance().get_Empty_i9b85g_k$()) {
         // Inline function 'com.varabyte.kobweb.silk.defer.renderWithDeferred.<anonymous>.<anonymous>' call
-        var value = ComposableLambda$invoke$ref_0(dispatchReceiver);
+        var value = ComposableLambda$invoke$ref_1(dispatchReceiver);
         $composer_1.updateRememberedValue_l1wh71_k$(value);
         tmp_1 = value;
       } else {
@@ -828,7 +948,7 @@
       tmp0_safe_receiver.updateScope_t8jcf_k$(renderWithDeferred$lambda_0(content, $changed));
     }
   }
-  function ComposableLambda$invoke$ref($boundThis) {
+  function ComposableLambda$invoke$ref_0($boundThis) {
     return function (p0, p1, p2) {
       return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
     };
@@ -856,7 +976,7 @@
   function ComposableSingletons$DeferredKt() {
     ComposableSingletons$DeferredKt_instance = this;
     var tmp = this;
-    tmp.lambda_1_r8sbbp_1 = ComposableLambda$invoke$ref(composableLambdaInstance(-300134205, false, ComposableSingletons$DeferredKt$lambda_1$lambda_ynev9p));
+    tmp.lambda_1_r8sbbp_1 = ComposableLambda$invoke$ref_0(composableLambdaInstance(-300134205, false, ComposableSingletons$DeferredKt$lambda_1$lambda_ynev9p));
   }
   protoOf(ComposableSingletons$DeferredKt).get_lambda_1_bzdzzo_k$ = function () {
     return this.lambda_1_r8sbbp_1;
@@ -895,7 +1015,7 @@
       return Unit_getInstance();
     };
   }
-  function ComposableLambda$invoke$ref_0($boundThis) {
+  function ComposableLambda$invoke$ref_1($boundThis) {
     return function (p0, p1) {
       return $boundThis.invoke_z8di7s_k$(p0, p1);
     };
@@ -1206,7 +1326,7 @@
     return get_MutableSilkConfigInstance();
   };
   var Companion_instance_1;
-  function Companion_getInstance_5() {
+  function Companion_getInstance_6() {
     if (Companion_instance_1 == null)
       new Companion_1();
     return Companion_instance_1;
@@ -1396,7 +1516,7 @@
     return new OfPseudoClass(target, pseudoClass + '(' + joinToString(destination) + ')');
   };
   var Companion_instance_2;
-  function Companion_getInstance_6() {
+  function Companion_getInstance_7() {
     if (Companion_instance_2 == null)
       new Companion_2();
     return Companion_instance_2;
@@ -1512,7 +1632,7 @@
     return this.buildSelectorText_1jq9i8_k$(this.attributeSelectors_1, this.pseudoClasses_1, this.pseudoElement_1);
   };
   function CssRule(target) {
-    Companion_getInstance_6();
+    Companion_getInstance_7();
     this.target_1 = target;
     this.mediaQuery_1 = null;
   }
@@ -1802,7 +1922,7 @@
     Companion_instance_3 = this;
   }
   var Companion_instance_3;
-  function Companion_getInstance_7() {
+  function Companion_getInstance_8() {
     if (Companion_instance_3 == null)
       new Companion_3();
     return Companion_instance_3;
@@ -1905,7 +2025,7 @@
     };
   }
   function CssStyle(init, extraModifier) {
-    Companion_getInstance_7();
+    Companion_getInstance_8();
     var tmp;
     if (extraModifier === VOID) {
       tmp = CssStyle$_init_$lambda_598xul;
@@ -1926,10 +2046,10 @@
     var classNames = mutableListOf([selector]);
     var lightModifiers = assertNoAttributeModifiers(mergeCssModifiers(new CssStyleScope(ColorMode_LIGHT_getInstance()), this, this.init_1), this, selector, layer);
     var darkModifiers = assertNoAttributeModifiers(mergeCssModifiers(new CssStyleScope(ColorMode_DARK_getInstance()), this, this.init_1), this, selector, layer);
-    var tmp = Companion_getInstance_8();
-    var tmp0_safe_receiver = lightModifiers.get_wei43m_k$(Companion_getInstance_9().get_BaseKey_nalpdx_k$());
+    var tmp = Companion_getInstance_9();
+    var tmp0_safe_receiver = lightModifiers.get_wei43m_k$(Companion_getInstance_10().get_BaseKey_nalpdx_k$());
     var tmp_0 = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.get_modifier_t1pq5c_k$();
-    var tmp1_safe_receiver = darkModifiers.get_wei43m_k$(Companion_getInstance_9().get_BaseKey_nalpdx_k$());
+    var tmp1_safe_receiver = darkModifiers.get_wei43m_k$(Companion_getInstance_10().get_BaseKey_nalpdx_k$());
     var tmp2_safe_receiver = tmp.from_e5pdcm_k$(tmp_0, tmp1_safe_receiver == null ? null : tmp1_safe_receiver.get_modifier_t1pq5c_k$());
     if (tmp2_safe_receiver == null)
       null;
@@ -1946,7 +2066,7 @@
     while (tmp0_iterator.hasNext_bitz1p_k$()) {
       var element = tmp0_iterator.next_20eer_k$();
       // Inline function 'com.varabyte.kobweb.silk.style.CssStyle.addStylesInto.<anonymous>' call
-      if (!element.equals(Companion_getInstance_9().get_BaseKey_nalpdx_k$())) {
+      if (!element.equals(Companion_getInstance_10().get_BaseKey_nalpdx_k$())) {
         destination.add_utx5q5_k$(element);
       }
     }
@@ -1954,7 +2074,7 @@
     var tmp3_iterator = allCssRuleKeys.iterator_jk1svi_k$();
     $l$loop: while (tmp3_iterator.hasNext_bitz1p_k$()) {
       var cssRuleKey = tmp3_iterator.next_20eer_k$();
-      var tmp_1 = Companion_getInstance_8();
+      var tmp_1 = Companion_getInstance_9();
       var tmp4_safe_receiver = lightModifiers.get_wei43m_k$(cssRuleKey);
       var tmp_2 = tmp4_safe_receiver == null ? null : tmp4_safe_receiver.get_modifier_t1pq5c_k$();
       var tmp5_safe_receiver = darkModifiers.get_wei43m_k$(cssRuleKey);
@@ -2082,7 +2202,7 @@
     return tmp_1;
   };
   var Companion_instance_4;
-  function Companion_getInstance_8() {
+  function Companion_getInstance_9() {
     if (Companion_instance_4 == null)
       new Companion_4();
     return Companion_instance_4;
@@ -2165,8 +2285,8 @@
       // Inline function 'com.varabyte.kobweb.silk.style.ImmutableCssStyle.toModifier.<anonymous>' call
       // Inline function 'kotlin.text.lowercase' call
       // Inline function 'kotlin.js.asDynamic' call
-      var tmp$ret$1 = Companion_getInstance_11().get_current_2iudd5_k$($composer_0, 6).get_opposite_ywslzk_k$().get_name_woqyms_k$().toLowerCase();
-      if (!endsWith(element, tmp$ret$1)) {
+      var tmp$ret$1 = Companion_getInstance_12().get_current_2iudd5_k$($composer_0, 6).get_opposite_ywslzk_k$().get_name_woqyms_k$().toLowerCase();
+      if (!endsWith_0(element, tmp$ret$1)) {
         destination.add_utx5q5_k$(element);
       }
     }
@@ -2296,6 +2416,19 @@
   var com_varabyte_kobweb_silk_style_CssStyle$stable;
   function base_2(_this__u8e3s4, extraModifier, init) {
     return CssStyle_2(extraModifier, base$lambda_1(init));
+  }
+  function toModifier_1(_this__u8e3s4, $composer, $changed) {
+    var $composer_0 = $composer;
+    $composer_0.startReplaceableGroup_ip860b_k$(748086722);
+    if (isTraceInProgress()) {
+      traceEventStart(748086722, $changed, -1, 'com.varabyte.kobweb.silk.style.toModifier (CssStyle.kt:565)');
+    }
+    var tmp0 = _toModifier(_this__u8e3s4, $composer_0, 14 & $changed);
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    $composer_0.endReplaceableGroup_ern0ak_k$();
+    return tmp0;
   }
   function CssStyle$o$_init_$lambda_60e9n6($extraModifier) {
     return function ($composer, $changed) {
@@ -2651,7 +2784,7 @@
     return this.BaseKey_1;
   };
   var Companion_instance_5;
-  function Companion_getInstance_9() {
+  function Companion_getInstance_10() {
     if (Companion_instance_5 == null)
       new Companion_5();
     return Companion_instance_5;
@@ -2701,7 +2834,7 @@
     return true;
   };
   function CssModifier(modifier, mediaQuery, suffix) {
-    Companion_getInstance_9();
+    Companion_getInstance_10();
     mediaQuery = mediaQuery === VOID ? null : mediaQuery;
     suffix = suffix === VOID ? null : suffix;
     this.modifier_1 = modifier;
@@ -2879,18 +3012,18 @@
     return distinct(destination).get_size_woubt6_k$() === 1;
   };
   var Companion_instance_6;
-  function Companion_getInstance_10() {
+  function Companion_getInstance_11() {
     if (Companion_instance_6 == null)
       new Companion_6();
     return Companion_instance_6;
   }
   function Keyframes$usesColorMode$delegate$lambda_0(this$0) {
     return function () {
-      return !Companion_getInstance_10().isColorModeAgnostic_xlmfaa_k$(this$0.init_1);
+      return !Companion_getInstance_11().isColorModeAgnostic_xlmfaa_k$(this$0.init_1);
     };
   }
   function Keyframes_0(init) {
-    Companion_getInstance_10();
+    Companion_getInstance_11();
     this.init_1 = init;
     var tmp = this;
     tmp.usesColorMode$delegate_1 = lazy(Keyframes$usesColorMode$delegate$lambda_0(this));
@@ -3042,7 +3175,7 @@
     _init_properties_BreakpointConditions_kt__53om95();
     var tmp = Companion_getInstance_0();
     // Inline function 'org.jetbrains.compose.web.css.Companion.None' call
-    Companion_getInstance_1();
+    Companion_getInstance_2();
     // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -3058,7 +3191,7 @@
     _init_properties_BreakpointConditions_kt__53om95();
     var tmp = Companion_getInstance_0();
     // Inline function 'org.jetbrains.compose.web.css.Companion.None' call
-    Companion_getInstance_1();
+    Companion_getInstance_2();
     // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -3074,7 +3207,7 @@
     _init_properties_BreakpointConditions_kt__53om95();
     var tmp = Companion_getInstance_0();
     // Inline function 'org.jetbrains.compose.web.css.Companion.None' call
-    Companion_getInstance_1();
+    Companion_getInstance_2();
     // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -3090,7 +3223,7 @@
     _init_properties_BreakpointConditions_kt__53om95();
     var tmp = Companion_getInstance_0();
     // Inline function 'org.jetbrains.compose.web.css.Companion.None' call
-    Companion_getInstance_1();
+    Companion_getInstance_2();
     // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -3106,7 +3239,7 @@
     _init_properties_BreakpointConditions_kt__53om95();
     var tmp = Companion_getInstance_0();
     // Inline function 'org.jetbrains.compose.web.css.Companion.None' call
-    Companion_getInstance_1();
+    Companion_getInstance_2();
     // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -3122,7 +3255,7 @@
     _init_properties_BreakpointConditions_kt__53om95();
     var tmp = Companion_getInstance_0();
     // Inline function 'org.jetbrains.compose.web.css.Companion.None' call
-    Companion_getInstance_1();
+    Companion_getInstance_2();
     // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -3138,7 +3271,7 @@
     _init_properties_BreakpointConditions_kt__53om95();
     var tmp = Companion_getInstance_0();
     // Inline function 'org.jetbrains.compose.web.css.Companion.None' call
-    Companion_getInstance_1();
+    Companion_getInstance_2();
     // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -3154,7 +3287,7 @@
     _init_properties_BreakpointConditions_kt__53om95();
     var tmp = Companion_getInstance_0();
     // Inline function 'org.jetbrains.compose.web.css.Companion.None' call
-    Companion_getInstance_1();
+    Companion_getInstance_2();
     // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -3170,7 +3303,7 @@
     _init_properties_BreakpointConditions_kt__53om95();
     var tmp = Companion_getInstance_0();
     // Inline function 'org.jetbrains.compose.web.css.Companion.None' call
-    Companion_getInstance_1();
+    Companion_getInstance_2();
     // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -3186,7 +3319,7 @@
     _init_properties_BreakpointConditions_kt__53om95();
     var tmp = Companion_getInstance_0();
     // Inline function 'org.jetbrains.compose.web.css.Companion.None' call
-    Companion_getInstance_1();
+    Companion_getInstance_2();
     // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -3319,7 +3452,7 @@
     return new OfAttributeSelector(_this__u8e3s4, 'aria-disabled="true"');
   }
   function not(_this__u8e3s4, params) {
-    return Companion_getInstance_6().OfFunctionalPseudoClass_j2u724_k$(_this__u8e3s4, 'not', params.slice());
+    return Companion_getInstance_7().OfFunctionalPseudoClass_j2u724_k$(_this__u8e3s4, 'not', params.slice());
   }
   function get_hover(_this__u8e3s4) {
     return new OfPseudoClass(_this__u8e3s4, 'hover');
@@ -4203,7 +4336,7 @@
     if (isTraceInProgress()) {
       traceEventStart(-1777229, $changed, -1, 'com.varabyte.kobweb.silk.theme.ImmutableSilkTheme.<get-palette> (SilkTheme.kt:947)');
     }
-    var tmp0 = this.palettes_1.get_4bsmki_k$(Companion_getInstance_11().get_current_2iudd5_k$($composer_0, 6));
+    var tmp0 = this.palettes_1.get_4bsmki_k$(Companion_getInstance_12().get_current_2iudd5_k$($composer_0, 6));
     if (isTraceInProgress()) {
       traceEventEnd();
     }
@@ -4539,7 +4672,7 @@
     return tmp0_0;
   };
   var Companion_instance_7;
-  function Companion_getInstance_11() {
+  function Companion_getInstance_12() {
     ColorMode_initEntries();
     if (Companion_instance_7 == null)
       new Companion_7();
@@ -4572,7 +4705,7 @@
     ColorMode_entriesInitialized = true;
     ColorMode_LIGHT_instance = new ColorMode('LIGHT', 0);
     ColorMode_DARK_instance = new ColorMode('DARK', 1);
-    Companion_getInstance_11();
+    Companion_getInstance_12();
   }
   var $ENTRIES_0;
   function ColorMode(name, ordinal) {
@@ -4610,7 +4743,7 @@
   }
   function rootColorModeState$delegate$lambda() {
     _init_properties_ColorMode_kt__lz79sc();
-    return mutableStateOf(Companion_getInstance_5().get_Instance_ljxvgi_k$().get_initialColorMode_i1z52t_k$());
+    return mutableStateOf(Companion_getInstance_6().get_Instance_ljxvgi_k$().get_initialColorMode_i1z52t_k$());
   }
   function LocalColorMode$lambda() {
     _init_properties_ColorMode_kt__lz79sc();
@@ -4639,16 +4772,16 @@
   }
   function Monochrome() {
     Monochrome_instance = this;
-    this._50__1 = Companion_getInstance_2().rgb_6orfmz_k$(15921906);
-    this._100__1 = Companion_getInstance_2().rgb_6orfmz_k$(15132390);
-    this._200__1 = Companion_getInstance_2().rgb_6orfmz_k$(13421772);
-    this._300__1 = Companion_getInstance_2().rgb_6orfmz_k$(11776947);
-    this._400__1 = Companion_getInstance_2().rgb_6orfmz_k$(10066329);
-    this._500__1 = Companion_getInstance_2().rgb_6orfmz_k$(8421504);
-    this._600__1 = Companion_getInstance_2().rgb_6orfmz_k$(6710886);
-    this._700__1 = Companion_getInstance_2().rgb_6orfmz_k$(5066061);
-    this._800__1 = Companion_getInstance_2().rgb_6orfmz_k$(3355443);
-    this._900__1 = Companion_getInstance_2().rgb_6orfmz_k$(1710618);
+    this._50__1 = Companion_getInstance_3().rgb_6orfmz_k$(15921906);
+    this._100__1 = Companion_getInstance_3().rgb_6orfmz_k$(15132390);
+    this._200__1 = Companion_getInstance_3().rgb_6orfmz_k$(13421772);
+    this._300__1 = Companion_getInstance_3().rgb_6orfmz_k$(11776947);
+    this._400__1 = Companion_getInstance_3().rgb_6orfmz_k$(10066329);
+    this._500__1 = Companion_getInstance_3().rgb_6orfmz_k$(8421504);
+    this._600__1 = Companion_getInstance_3().rgb_6orfmz_k$(6710886);
+    this._700__1 = Companion_getInstance_3().rgb_6orfmz_k$(5066061);
+    this._800__1 = Companion_getInstance_3().rgb_6orfmz_k$(3355443);
+    this._900__1 = Companion_getInstance_3().rgb_6orfmz_k$(1710618);
   }
   protoOf(Monochrome).get__50_18jcbz_k$ = function () {
     return this._50__1;
@@ -4688,16 +4821,16 @@
   }
   function Red() {
     Red_instance = this;
-    this._50__1 = Companion_getInstance_2().rgb_6orfmz_k$(16772078);
-    this._100__1 = Companion_getInstance_2().rgb_6orfmz_k$(16764370);
-    this._200__1 = Companion_getInstance_2().rgb_6orfmz_k$(15702682);
-    this._300__1 = Companion_getInstance_2().rgb_6orfmz_k$(15037299);
-    this._400__1 = Companion_getInstance_2().rgb_6orfmz_k$(15684432);
-    this._500__1 = Companion_getInstance_2().rgb_6orfmz_k$(16007990);
-    this._600__1 = Companion_getInstance_2().rgb_6orfmz_k$(15022389);
-    this._700__1 = Companion_getInstance_2().rgb_6orfmz_k$(13840175);
-    this._800__1 = Companion_getInstance_2().rgb_6orfmz_k$(12986408);
-    this._900__1 = Companion_getInstance_2().rgb_6orfmz_k$(12000284);
+    this._50__1 = Companion_getInstance_3().rgb_6orfmz_k$(16772078);
+    this._100__1 = Companion_getInstance_3().rgb_6orfmz_k$(16764370);
+    this._200__1 = Companion_getInstance_3().rgb_6orfmz_k$(15702682);
+    this._300__1 = Companion_getInstance_3().rgb_6orfmz_k$(15037299);
+    this._400__1 = Companion_getInstance_3().rgb_6orfmz_k$(15684432);
+    this._500__1 = Companion_getInstance_3().rgb_6orfmz_k$(16007990);
+    this._600__1 = Companion_getInstance_3().rgb_6orfmz_k$(15022389);
+    this._700__1 = Companion_getInstance_3().rgb_6orfmz_k$(13840175);
+    this._800__1 = Companion_getInstance_3().rgb_6orfmz_k$(12986408);
+    this._900__1 = Companion_getInstance_3().rgb_6orfmz_k$(12000284);
   }
   protoOf(Red).get__50_18jcbz_k$ = function () {
     return this._50__1;
@@ -4737,16 +4870,16 @@
   }
   function Pink() {
     Pink_instance = this;
-    this._50__1 = Companion_getInstance_2().rgb_6orfmz_k$(16573676);
-    this._100__1 = Companion_getInstance_2().rgb_6orfmz_k$(16301008);
-    this._200__1 = Companion_getInstance_2().rgb_6orfmz_k$(16027569);
-    this._300__1 = Companion_getInstance_2().rgb_6orfmz_k$(15753874);
-    this._400__1 = Companion_getInstance_2().rgb_6orfmz_k$(15483002);
-    this._500__1 = Companion_getInstance_2().rgb_6orfmz_k$(15277667);
-    this._600__1 = Companion_getInstance_2().rgb_6orfmz_k$(14162784);
-    this._700__1 = Companion_getInstance_2().rgb_6orfmz_k$(12720219);
-    this._800__1 = Companion_getInstance_2().rgb_6orfmz_k$(11342935);
-    this._900__1 = Companion_getInstance_2().rgb_6orfmz_k$(8916559);
+    this._50__1 = Companion_getInstance_3().rgb_6orfmz_k$(16573676);
+    this._100__1 = Companion_getInstance_3().rgb_6orfmz_k$(16301008);
+    this._200__1 = Companion_getInstance_3().rgb_6orfmz_k$(16027569);
+    this._300__1 = Companion_getInstance_3().rgb_6orfmz_k$(15753874);
+    this._400__1 = Companion_getInstance_3().rgb_6orfmz_k$(15483002);
+    this._500__1 = Companion_getInstance_3().rgb_6orfmz_k$(15277667);
+    this._600__1 = Companion_getInstance_3().rgb_6orfmz_k$(14162784);
+    this._700__1 = Companion_getInstance_3().rgb_6orfmz_k$(12720219);
+    this._800__1 = Companion_getInstance_3().rgb_6orfmz_k$(11342935);
+    this._900__1 = Companion_getInstance_3().rgb_6orfmz_k$(8916559);
   }
   protoOf(Pink).get__50_18jcbz_k$ = function () {
     return this._50__1;
@@ -4786,16 +4919,16 @@
   }
   function Purple() {
     Purple_instance = this;
-    this._50__1 = Companion_getInstance_2().rgb_6orfmz_k$(15984117);
-    this._100__1 = Companion_getInstance_2().rgb_6orfmz_k$(14794471);
-    this._200__1 = Companion_getInstance_2().rgb_6orfmz_k$(13538264);
-    this._300__1 = Companion_getInstance_2().rgb_6orfmz_k$(12216520);
-    this._400__1 = Companion_getInstance_2().rgb_6orfmz_k$(11225020);
-    this._500__1 = Companion_getInstance_2().rgb_6orfmz_k$(10233776);
-    this._600__1 = Companion_getInstance_2().rgb_6orfmz_k$(9315498);
-    this._700__1 = Companion_getInstance_2().rgb_6orfmz_k$(8069026);
-    this._800__1 = Companion_getInstance_2().rgb_6orfmz_k$(6953882);
-    this._900__1 = Companion_getInstance_2().rgb_6orfmz_k$(4854924);
+    this._50__1 = Companion_getInstance_3().rgb_6orfmz_k$(15984117);
+    this._100__1 = Companion_getInstance_3().rgb_6orfmz_k$(14794471);
+    this._200__1 = Companion_getInstance_3().rgb_6orfmz_k$(13538264);
+    this._300__1 = Companion_getInstance_3().rgb_6orfmz_k$(12216520);
+    this._400__1 = Companion_getInstance_3().rgb_6orfmz_k$(11225020);
+    this._500__1 = Companion_getInstance_3().rgb_6orfmz_k$(10233776);
+    this._600__1 = Companion_getInstance_3().rgb_6orfmz_k$(9315498);
+    this._700__1 = Companion_getInstance_3().rgb_6orfmz_k$(8069026);
+    this._800__1 = Companion_getInstance_3().rgb_6orfmz_k$(6953882);
+    this._900__1 = Companion_getInstance_3().rgb_6orfmz_k$(4854924);
   }
   protoOf(Purple).get__50_18jcbz_k$ = function () {
     return this._50__1;
@@ -4835,16 +4968,16 @@
   }
   function DeepPurple() {
     DeepPurple_instance = this;
-    this._50__1 = Companion_getInstance_2().rgb_6orfmz_k$(15591414);
-    this._100__1 = Companion_getInstance_2().rgb_6orfmz_k$(13747433);
-    this._200__1 = Companion_getInstance_2().rgb_6orfmz_k$(11771355);
-    this._300__1 = Companion_getInstance_2().rgb_6orfmz_k$(9795021);
-    this._400__1 = Companion_getInstance_2().rgb_6orfmz_k$(8280002);
-    this._500__1 = Companion_getInstance_2().rgb_6orfmz_k$(6765239);
-    this._600__1 = Companion_getInstance_2().rgb_6orfmz_k$(6174129);
-    this._700__1 = Companion_getInstance_2().rgb_6orfmz_k$(5320104);
-    this._800__1 = Companion_getInstance_2().rgb_6orfmz_k$(4532128);
-    this._900__1 = Companion_getInstance_2().rgb_6orfmz_k$(3218322);
+    this._50__1 = Companion_getInstance_3().rgb_6orfmz_k$(15591414);
+    this._100__1 = Companion_getInstance_3().rgb_6orfmz_k$(13747433);
+    this._200__1 = Companion_getInstance_3().rgb_6orfmz_k$(11771355);
+    this._300__1 = Companion_getInstance_3().rgb_6orfmz_k$(9795021);
+    this._400__1 = Companion_getInstance_3().rgb_6orfmz_k$(8280002);
+    this._500__1 = Companion_getInstance_3().rgb_6orfmz_k$(6765239);
+    this._600__1 = Companion_getInstance_3().rgb_6orfmz_k$(6174129);
+    this._700__1 = Companion_getInstance_3().rgb_6orfmz_k$(5320104);
+    this._800__1 = Companion_getInstance_3().rgb_6orfmz_k$(4532128);
+    this._900__1 = Companion_getInstance_3().rgb_6orfmz_k$(3218322);
   }
   protoOf(DeepPurple).get__50_18jcbz_k$ = function () {
     return this._50__1;
@@ -4884,16 +5017,16 @@
   }
   function Indigo() {
     Indigo_instance = this;
-    this._50__1 = Companion_getInstance_2().rgb_6orfmz_k$(15264502);
-    this._100__1 = Companion_getInstance_2().rgb_6orfmz_k$(12962537);
-    this._200__1 = Companion_getInstance_2().rgb_6orfmz_k$(10463450);
-    this._300__1 = Companion_getInstance_2().rgb_6orfmz_k$(7964363);
-    this._400__1 = Companion_getInstance_2().rgb_6orfmz_k$(6056896);
-    this._500__1 = Companion_getInstance_2().rgb_6orfmz_k$(4149685);
-    this._600__1 = Companion_getInstance_2().rgb_6orfmz_k$(3754411);
-    this._700__1 = Companion_getInstance_2().rgb_6orfmz_k$(3162015);
-    this._800__1 = Companion_getInstance_2().rgb_6orfmz_k$(2635155);
-    this._900__1 = Companion_getInstance_2().rgb_6orfmz_k$(1713022);
+    this._50__1 = Companion_getInstance_3().rgb_6orfmz_k$(15264502);
+    this._100__1 = Companion_getInstance_3().rgb_6orfmz_k$(12962537);
+    this._200__1 = Companion_getInstance_3().rgb_6orfmz_k$(10463450);
+    this._300__1 = Companion_getInstance_3().rgb_6orfmz_k$(7964363);
+    this._400__1 = Companion_getInstance_3().rgb_6orfmz_k$(6056896);
+    this._500__1 = Companion_getInstance_3().rgb_6orfmz_k$(4149685);
+    this._600__1 = Companion_getInstance_3().rgb_6orfmz_k$(3754411);
+    this._700__1 = Companion_getInstance_3().rgb_6orfmz_k$(3162015);
+    this._800__1 = Companion_getInstance_3().rgb_6orfmz_k$(2635155);
+    this._900__1 = Companion_getInstance_3().rgb_6orfmz_k$(1713022);
   }
   protoOf(Indigo).get__50_18jcbz_k$ = function () {
     return this._50__1;
@@ -4933,16 +5066,16 @@
   }
   function Blue() {
     Blue_instance = this;
-    this._50__1 = Companion_getInstance_2().rgb_6orfmz_k$(14938877);
-    this._100__1 = Companion_getInstance_2().rgb_6orfmz_k$(12312315);
-    this._200__1 = Companion_getInstance_2().rgb_6orfmz_k$(9489145);
-    this._300__1 = Companion_getInstance_2().rgb_6orfmz_k$(6600182);
-    this._400__1 = Companion_getInstance_2().rgb_6orfmz_k$(4367861);
-    this._500__1 = Companion_getInstance_2().rgb_6orfmz_k$(2201331);
-    this._600__1 = Companion_getInstance_2().rgb_6orfmz_k$(2001125);
-    this._700__1 = Companion_getInstance_2().rgb_6orfmz_k$(1668818);
-    this._800__1 = Companion_getInstance_2().rgb_6orfmz_k$(1402304);
-    this._900__1 = Companion_getInstance_2().rgb_6orfmz_k$(870305);
+    this._50__1 = Companion_getInstance_3().rgb_6orfmz_k$(14938877);
+    this._100__1 = Companion_getInstance_3().rgb_6orfmz_k$(12312315);
+    this._200__1 = Companion_getInstance_3().rgb_6orfmz_k$(9489145);
+    this._300__1 = Companion_getInstance_3().rgb_6orfmz_k$(6600182);
+    this._400__1 = Companion_getInstance_3().rgb_6orfmz_k$(4367861);
+    this._500__1 = Companion_getInstance_3().rgb_6orfmz_k$(2201331);
+    this._600__1 = Companion_getInstance_3().rgb_6orfmz_k$(2001125);
+    this._700__1 = Companion_getInstance_3().rgb_6orfmz_k$(1668818);
+    this._800__1 = Companion_getInstance_3().rgb_6orfmz_k$(1402304);
+    this._900__1 = Companion_getInstance_3().rgb_6orfmz_k$(870305);
   }
   protoOf(Blue).get__50_18jcbz_k$ = function () {
     return this._50__1;
@@ -4982,16 +5115,16 @@
   }
   function LightBlue() {
     LightBlue_instance = this;
-    this._50__1 = Companion_getInstance_2().rgb_6orfmz_k$(14808574);
-    this._100__1 = Companion_getInstance_2().rgb_6orfmz_k$(11789820);
-    this._200__1 = Companion_getInstance_2().rgb_6orfmz_k$(8508666);
-    this._300__1 = Companion_getInstance_2().rgb_6orfmz_k$(5227511);
-    this._400__1 = Companion_getInstance_2().rgb_6orfmz_k$(2733814);
-    this._500__1 = Companion_getInstance_2().rgb_6orfmz_k$(240116);
-    this._600__1 = Companion_getInstance_2().rgb_6orfmz_k$(236517);
-    this._700__1 = Companion_getInstance_2().rgb_6orfmz_k$(166097);
-    this._800__1 = Companion_getInstance_2().rgb_6orfmz_k$(161725);
-    this._900__1 = Companion_getInstance_2().rgb_6orfmz_k$(87963);
+    this._50__1 = Companion_getInstance_3().rgb_6orfmz_k$(14808574);
+    this._100__1 = Companion_getInstance_3().rgb_6orfmz_k$(11789820);
+    this._200__1 = Companion_getInstance_3().rgb_6orfmz_k$(8508666);
+    this._300__1 = Companion_getInstance_3().rgb_6orfmz_k$(5227511);
+    this._400__1 = Companion_getInstance_3().rgb_6orfmz_k$(2733814);
+    this._500__1 = Companion_getInstance_3().rgb_6orfmz_k$(240116);
+    this._600__1 = Companion_getInstance_3().rgb_6orfmz_k$(236517);
+    this._700__1 = Companion_getInstance_3().rgb_6orfmz_k$(166097);
+    this._800__1 = Companion_getInstance_3().rgb_6orfmz_k$(161725);
+    this._900__1 = Companion_getInstance_3().rgb_6orfmz_k$(87963);
   }
   protoOf(LightBlue).get__50_18jcbz_k$ = function () {
     return this._50__1;
@@ -5031,16 +5164,16 @@
   }
   function Cyan() {
     Cyan_instance = this;
-    this._50__1 = Companion_getInstance_2().rgb_6orfmz_k$(14743546);
-    this._100__1 = Companion_getInstance_2().rgb_6orfmz_k$(11725810);
-    this._200__1 = Companion_getInstance_2().rgb_6orfmz_k$(8445674);
-    this._300__1 = Companion_getInstance_2().rgb_6orfmz_k$(5099745);
-    this._400__1 = Companion_getInstance_2().rgb_6orfmz_k$(2541274);
-    this._500__1 = Companion_getInstance_2().rgb_6orfmz_k$(48340);
-    this._600__1 = Companion_getInstance_2().rgb_6orfmz_k$(44225);
-    this._700__1 = Companion_getInstance_2().rgb_6orfmz_k$(38823);
-    this._800__1 = Companion_getInstance_2().rgb_6orfmz_k$(33679);
-    this._900__1 = Companion_getInstance_2().rgb_6orfmz_k$(24676);
+    this._50__1 = Companion_getInstance_3().rgb_6orfmz_k$(14743546);
+    this._100__1 = Companion_getInstance_3().rgb_6orfmz_k$(11725810);
+    this._200__1 = Companion_getInstance_3().rgb_6orfmz_k$(8445674);
+    this._300__1 = Companion_getInstance_3().rgb_6orfmz_k$(5099745);
+    this._400__1 = Companion_getInstance_3().rgb_6orfmz_k$(2541274);
+    this._500__1 = Companion_getInstance_3().rgb_6orfmz_k$(48340);
+    this._600__1 = Companion_getInstance_3().rgb_6orfmz_k$(44225);
+    this._700__1 = Companion_getInstance_3().rgb_6orfmz_k$(38823);
+    this._800__1 = Companion_getInstance_3().rgb_6orfmz_k$(33679);
+    this._900__1 = Companion_getInstance_3().rgb_6orfmz_k$(24676);
   }
   protoOf(Cyan).get__50_18jcbz_k$ = function () {
     return this._50__1;
@@ -5080,16 +5213,16 @@
   }
   function Teal() {
     Teal_instance = this;
-    this._50__1 = Companion_getInstance_2().rgb_6orfmz_k$(14742257);
-    this._100__1 = Companion_getInstance_2().rgb_6orfmz_k$(11722715);
-    this._200__1 = Companion_getInstance_2().rgb_6orfmz_k$(8440772);
-    this._300__1 = Companion_getInstance_2().rgb_6orfmz_k$(5093036);
-    this._400__1 = Companion_getInstance_2().rgb_6orfmz_k$(2533018);
-    this._500__1 = Companion_getInstance_2().rgb_6orfmz_k$(38536);
-    this._600__1 = Companion_getInstance_2().rgb_6orfmz_k$(35195);
-    this._700__1 = Companion_getInstance_2().rgb_6orfmz_k$(31083);
-    this._800__1 = Companion_getInstance_2().rgb_6orfmz_k$(26972);
-    this._900__1 = Companion_getInstance_2().rgb_6orfmz_k$(19776);
+    this._50__1 = Companion_getInstance_3().rgb_6orfmz_k$(14742257);
+    this._100__1 = Companion_getInstance_3().rgb_6orfmz_k$(11722715);
+    this._200__1 = Companion_getInstance_3().rgb_6orfmz_k$(8440772);
+    this._300__1 = Companion_getInstance_3().rgb_6orfmz_k$(5093036);
+    this._400__1 = Companion_getInstance_3().rgb_6orfmz_k$(2533018);
+    this._500__1 = Companion_getInstance_3().rgb_6orfmz_k$(38536);
+    this._600__1 = Companion_getInstance_3().rgb_6orfmz_k$(35195);
+    this._700__1 = Companion_getInstance_3().rgb_6orfmz_k$(31083);
+    this._800__1 = Companion_getInstance_3().rgb_6orfmz_k$(26972);
+    this._900__1 = Companion_getInstance_3().rgb_6orfmz_k$(19776);
   }
   protoOf(Teal).get__50_18jcbz_k$ = function () {
     return this._50__1;
@@ -5129,16 +5262,16 @@
   }
   function Green() {
     Green_instance = this;
-    this._50__1 = Companion_getInstance_2().rgb_6orfmz_k$(15267305);
-    this._100__1 = Companion_getInstance_2().rgb_6orfmz_k$(13166281);
-    this._200__1 = Companion_getInstance_2().rgb_6orfmz_k$(10868391);
-    this._300__1 = Companion_getInstance_2().rgb_6orfmz_k$(8505220);
-    this._400__1 = Companion_getInstance_2().rgb_6orfmz_k$(6732650);
-    this._500__1 = Companion_getInstance_2().rgb_6orfmz_k$(5025616);
-    this._600__1 = Companion_getInstance_2().rgb_6orfmz_k$(4431943);
-    this._700__1 = Companion_getInstance_2().rgb_6orfmz_k$(3706428);
-    this._800__1 = Companion_getInstance_2().rgb_6orfmz_k$(3046706);
-    this._900__1 = Companion_getInstance_2().rgb_6orfmz_k$(1793568);
+    this._50__1 = Companion_getInstance_3().rgb_6orfmz_k$(15267305);
+    this._100__1 = Companion_getInstance_3().rgb_6orfmz_k$(13166281);
+    this._200__1 = Companion_getInstance_3().rgb_6orfmz_k$(10868391);
+    this._300__1 = Companion_getInstance_3().rgb_6orfmz_k$(8505220);
+    this._400__1 = Companion_getInstance_3().rgb_6orfmz_k$(6732650);
+    this._500__1 = Companion_getInstance_3().rgb_6orfmz_k$(5025616);
+    this._600__1 = Companion_getInstance_3().rgb_6orfmz_k$(4431943);
+    this._700__1 = Companion_getInstance_3().rgb_6orfmz_k$(3706428);
+    this._800__1 = Companion_getInstance_3().rgb_6orfmz_k$(3046706);
+    this._900__1 = Companion_getInstance_3().rgb_6orfmz_k$(1793568);
   }
   protoOf(Green).get__50_18jcbz_k$ = function () {
     return this._50__1;
@@ -5178,16 +5311,16 @@
   }
   function LightGreen() {
     LightGreen_instance = this;
-    this._50__1 = Companion_getInstance_2().rgb_6orfmz_k$(15857897);
-    this._100__1 = Companion_getInstance_2().rgb_6orfmz_k$(14478792);
-    this._200__1 = Companion_getInstance_2().rgb_6orfmz_k$(12968357);
-    this._300__1 = Companion_getInstance_2().rgb_6orfmz_k$(11457921);
-    this._400__1 = Companion_getInstance_2().rgb_6orfmz_k$(10275941);
-    this._500__1 = Companion_getInstance_2().rgb_6orfmz_k$(9159498);
-    this._600__1 = Companion_getInstance_2().rgb_6orfmz_k$(8172354);
-    this._700__1 = Companion_getInstance_2().rgb_6orfmz_k$(6856504);
-    this._800__1 = Companion_getInstance_2().rgb_6orfmz_k$(5606191);
-    this._900__1 = Companion_getInstance_2().rgb_6orfmz_k$(3369246);
+    this._50__1 = Companion_getInstance_3().rgb_6orfmz_k$(15857897);
+    this._100__1 = Companion_getInstance_3().rgb_6orfmz_k$(14478792);
+    this._200__1 = Companion_getInstance_3().rgb_6orfmz_k$(12968357);
+    this._300__1 = Companion_getInstance_3().rgb_6orfmz_k$(11457921);
+    this._400__1 = Companion_getInstance_3().rgb_6orfmz_k$(10275941);
+    this._500__1 = Companion_getInstance_3().rgb_6orfmz_k$(9159498);
+    this._600__1 = Companion_getInstance_3().rgb_6orfmz_k$(8172354);
+    this._700__1 = Companion_getInstance_3().rgb_6orfmz_k$(6856504);
+    this._800__1 = Companion_getInstance_3().rgb_6orfmz_k$(5606191);
+    this._900__1 = Companion_getInstance_3().rgb_6orfmz_k$(3369246);
   }
   protoOf(LightGreen).get__50_18jcbz_k$ = function () {
     return this._50__1;
@@ -5227,16 +5360,16 @@
   }
   function Lime() {
     Lime_instance = this;
-    this._50__1 = Companion_getInstance_2().rgb_6orfmz_k$(16382951);
-    this._100__1 = Companion_getInstance_2().rgb_6orfmz_k$(15791299);
-    this._200__1 = Companion_getInstance_2().rgb_6orfmz_k$(15134364);
-    this._300__1 = Companion_getInstance_2().rgb_6orfmz_k$(14477173);
-    this._400__1 = Companion_getInstance_2().rgb_6orfmz_k$(13951319);
-    this._500__1 = Companion_getInstance_2().rgb_6orfmz_k$(13491257);
-    this._600__1 = Companion_getInstance_2().rgb_6orfmz_k$(12634675);
-    this._700__1 = Companion_getInstance_2().rgb_6orfmz_k$(11514923);
-    this._800__1 = Companion_getInstance_2().rgb_6orfmz_k$(10394916);
-    this._900__1 = Companion_getInstance_2().rgb_6orfmz_k$(8550167);
+    this._50__1 = Companion_getInstance_3().rgb_6orfmz_k$(16382951);
+    this._100__1 = Companion_getInstance_3().rgb_6orfmz_k$(15791299);
+    this._200__1 = Companion_getInstance_3().rgb_6orfmz_k$(15134364);
+    this._300__1 = Companion_getInstance_3().rgb_6orfmz_k$(14477173);
+    this._400__1 = Companion_getInstance_3().rgb_6orfmz_k$(13951319);
+    this._500__1 = Companion_getInstance_3().rgb_6orfmz_k$(13491257);
+    this._600__1 = Companion_getInstance_3().rgb_6orfmz_k$(12634675);
+    this._700__1 = Companion_getInstance_3().rgb_6orfmz_k$(11514923);
+    this._800__1 = Companion_getInstance_3().rgb_6orfmz_k$(10394916);
+    this._900__1 = Companion_getInstance_3().rgb_6orfmz_k$(8550167);
   }
   protoOf(Lime).get__50_18jcbz_k$ = function () {
     return this._50__1;
@@ -5276,16 +5409,16 @@
   }
   function Yellow() {
     Yellow_instance = this;
-    this._50__1 = Companion_getInstance_2().rgb_6orfmz_k$(16776679);
-    this._100__1 = Companion_getInstance_2().rgb_6orfmz_k$(16775620);
-    this._200__1 = Companion_getInstance_2().rgb_6orfmz_k$(16774557);
-    this._300__1 = Companion_getInstance_2().rgb_6orfmz_k$(16773494);
-    this._400__1 = Companion_getInstance_2().rgb_6orfmz_k$(16772696);
-    this._500__1 = Companion_getInstance_2().rgb_6orfmz_k$(16771899);
-    this._600__1 = Companion_getInstance_2().rgb_6orfmz_k$(16635957);
-    this._700__1 = Companion_getInstance_2().rgb_6orfmz_k$(16498733);
-    this._800__1 = Companion_getInstance_2().rgb_6orfmz_k$(16361509);
-    this._900__1 = Companion_getInstance_2().rgb_6orfmz_k$(16088855);
+    this._50__1 = Companion_getInstance_3().rgb_6orfmz_k$(16776679);
+    this._100__1 = Companion_getInstance_3().rgb_6orfmz_k$(16775620);
+    this._200__1 = Companion_getInstance_3().rgb_6orfmz_k$(16774557);
+    this._300__1 = Companion_getInstance_3().rgb_6orfmz_k$(16773494);
+    this._400__1 = Companion_getInstance_3().rgb_6orfmz_k$(16772696);
+    this._500__1 = Companion_getInstance_3().rgb_6orfmz_k$(16771899);
+    this._600__1 = Companion_getInstance_3().rgb_6orfmz_k$(16635957);
+    this._700__1 = Companion_getInstance_3().rgb_6orfmz_k$(16498733);
+    this._800__1 = Companion_getInstance_3().rgb_6orfmz_k$(16361509);
+    this._900__1 = Companion_getInstance_3().rgb_6orfmz_k$(16088855);
   }
   protoOf(Yellow).get__50_18jcbz_k$ = function () {
     return this._50__1;
@@ -5325,16 +5458,16 @@
   }
   function Amber() {
     Amber_instance = this;
-    this._50__1 = Companion_getInstance_2().rgb_6orfmz_k$(16775393);
-    this._100__1 = Companion_getInstance_2().rgb_6orfmz_k$(16772275);
-    this._200__1 = Companion_getInstance_2().rgb_6orfmz_k$(16769154);
-    this._300__1 = Companion_getInstance_2().rgb_6orfmz_k$(16766287);
-    this._400__1 = Companion_getInstance_2().rgb_6orfmz_k$(16763432);
-    this._500__1 = Companion_getInstance_2().rgb_6orfmz_k$(16761095);
-    this._600__1 = Companion_getInstance_2().rgb_6orfmz_k$(16757504);
-    this._700__1 = Companion_getInstance_2().rgb_6orfmz_k$(16752640);
-    this._800__1 = Companion_getInstance_2().rgb_6orfmz_k$(16748288);
-    this._900__1 = Companion_getInstance_2().rgb_6orfmz_k$(16740096);
+    this._50__1 = Companion_getInstance_3().rgb_6orfmz_k$(16775393);
+    this._100__1 = Companion_getInstance_3().rgb_6orfmz_k$(16772275);
+    this._200__1 = Companion_getInstance_3().rgb_6orfmz_k$(16769154);
+    this._300__1 = Companion_getInstance_3().rgb_6orfmz_k$(16766287);
+    this._400__1 = Companion_getInstance_3().rgb_6orfmz_k$(16763432);
+    this._500__1 = Companion_getInstance_3().rgb_6orfmz_k$(16761095);
+    this._600__1 = Companion_getInstance_3().rgb_6orfmz_k$(16757504);
+    this._700__1 = Companion_getInstance_3().rgb_6orfmz_k$(16752640);
+    this._800__1 = Companion_getInstance_3().rgb_6orfmz_k$(16748288);
+    this._900__1 = Companion_getInstance_3().rgb_6orfmz_k$(16740096);
   }
   protoOf(Amber).get__50_18jcbz_k$ = function () {
     return this._50__1;
@@ -5374,16 +5507,16 @@
   }
   function Orange() {
     Orange_instance = this;
-    this._50__1 = Companion_getInstance_2().rgb_6orfmz_k$(16774112);
-    this._100__1 = Companion_getInstance_2().rgb_6orfmz_k$(16769202);
-    this._200__1 = Companion_getInstance_2().rgb_6orfmz_k$(16764032);
-    this._300__1 = Companion_getInstance_2().rgb_6orfmz_k$(16758605);
-    this._400__1 = Companion_getInstance_2().rgb_6orfmz_k$(16754470);
-    this._500__1 = Companion_getInstance_2().rgb_6orfmz_k$(16750592);
-    this._600__1 = Companion_getInstance_2().rgb_6orfmz_k$(16485376);
-    this._700__1 = Companion_getInstance_2().rgb_6orfmz_k$(16088064);
-    this._800__1 = Companion_getInstance_2().rgb_6orfmz_k$(15690752);
-    this._900__1 = Companion_getInstance_2().rgb_6orfmz_k$(15094016);
+    this._50__1 = Companion_getInstance_3().rgb_6orfmz_k$(16774112);
+    this._100__1 = Companion_getInstance_3().rgb_6orfmz_k$(16769202);
+    this._200__1 = Companion_getInstance_3().rgb_6orfmz_k$(16764032);
+    this._300__1 = Companion_getInstance_3().rgb_6orfmz_k$(16758605);
+    this._400__1 = Companion_getInstance_3().rgb_6orfmz_k$(16754470);
+    this._500__1 = Companion_getInstance_3().rgb_6orfmz_k$(16750592);
+    this._600__1 = Companion_getInstance_3().rgb_6orfmz_k$(16485376);
+    this._700__1 = Companion_getInstance_3().rgb_6orfmz_k$(16088064);
+    this._800__1 = Companion_getInstance_3().rgb_6orfmz_k$(15690752);
+    this._900__1 = Companion_getInstance_3().rgb_6orfmz_k$(15094016);
   }
   protoOf(Orange).get__50_18jcbz_k$ = function () {
     return this._50__1;
@@ -5423,16 +5556,16 @@
   }
   function DeepOrange() {
     DeepOrange_instance = this;
-    this._50__1 = Companion_getInstance_2().rgb_6orfmz_k$(16509415);
-    this._100__1 = Companion_getInstance_2().rgb_6orfmz_k$(16764092);
-    this._200__1 = Companion_getInstance_2().rgb_6orfmz_k$(16755601);
-    this._300__1 = Companion_getInstance_2().rgb_6orfmz_k$(16747109);
-    this._400__1 = Companion_getInstance_2().rgb_6orfmz_k$(16740419);
-    this._500__1 = Companion_getInstance_2().rgb_6orfmz_k$(16733986);
-    this._600__1 = Companion_getInstance_2().rgb_6orfmz_k$(16011550);
-    this._700__1 = Companion_getInstance_2().rgb_6orfmz_k$(15092249);
-    this._800__1 = Companion_getInstance_2().rgb_6orfmz_k$(14172949);
-    this._900__1 = Companion_getInstance_2().rgb_6orfmz_k$(12531212);
+    this._50__1 = Companion_getInstance_3().rgb_6orfmz_k$(16509415);
+    this._100__1 = Companion_getInstance_3().rgb_6orfmz_k$(16764092);
+    this._200__1 = Companion_getInstance_3().rgb_6orfmz_k$(16755601);
+    this._300__1 = Companion_getInstance_3().rgb_6orfmz_k$(16747109);
+    this._400__1 = Companion_getInstance_3().rgb_6orfmz_k$(16740419);
+    this._500__1 = Companion_getInstance_3().rgb_6orfmz_k$(16733986);
+    this._600__1 = Companion_getInstance_3().rgb_6orfmz_k$(16011550);
+    this._700__1 = Companion_getInstance_3().rgb_6orfmz_k$(15092249);
+    this._800__1 = Companion_getInstance_3().rgb_6orfmz_k$(14172949);
+    this._900__1 = Companion_getInstance_3().rgb_6orfmz_k$(12531212);
   }
   protoOf(DeepOrange).get__50_18jcbz_k$ = function () {
     return this._50__1;
@@ -5472,16 +5605,16 @@
   }
   function Brown() {
     Brown_instance = this;
-    this._50__1 = Companion_getInstance_2().rgb_6orfmz_k$(15723497);
-    this._100__1 = Companion_getInstance_2().rgb_6orfmz_k$(14142664);
-    this._200__1 = Companion_getInstance_2().rgb_6orfmz_k$(12364452);
-    this._300__1 = Companion_getInstance_2().rgb_6orfmz_k$(10586239);
-    this._400__1 = Companion_getInstance_2().rgb_6orfmz_k$(9268835);
-    this._500__1 = Companion_getInstance_2().rgb_6orfmz_k$(7951688);
-    this._600__1 = Companion_getInstance_2().rgb_6orfmz_k$(7162945);
-    this._700__1 = Companion_getInstance_2().rgb_6orfmz_k$(6111287);
-    this._800__1 = Companion_getInstance_2().rgb_6orfmz_k$(5125166);
-    this._900__1 = Companion_getInstance_2().rgb_6orfmz_k$(4073251);
+    this._50__1 = Companion_getInstance_3().rgb_6orfmz_k$(15723497);
+    this._100__1 = Companion_getInstance_3().rgb_6orfmz_k$(14142664);
+    this._200__1 = Companion_getInstance_3().rgb_6orfmz_k$(12364452);
+    this._300__1 = Companion_getInstance_3().rgb_6orfmz_k$(10586239);
+    this._400__1 = Companion_getInstance_3().rgb_6orfmz_k$(9268835);
+    this._500__1 = Companion_getInstance_3().rgb_6orfmz_k$(7951688);
+    this._600__1 = Companion_getInstance_3().rgb_6orfmz_k$(7162945);
+    this._700__1 = Companion_getInstance_3().rgb_6orfmz_k$(6111287);
+    this._800__1 = Companion_getInstance_3().rgb_6orfmz_k$(5125166);
+    this._900__1 = Companion_getInstance_3().rgb_6orfmz_k$(4073251);
   }
   protoOf(Brown).get__50_18jcbz_k$ = function () {
     return this._50__1;
@@ -5521,16 +5654,16 @@
   }
   function Gray() {
     Gray_instance = this;
-    this._50__1 = Companion_getInstance_2().rgb_6orfmz_k$(16448250);
-    this._100__1 = Companion_getInstance_2().rgb_6orfmz_k$(16119285);
-    this._200__1 = Companion_getInstance_2().rgb_6orfmz_k$(15658734);
-    this._300__1 = Companion_getInstance_2().rgb_6orfmz_k$(14737632);
-    this._400__1 = Companion_getInstance_2().rgb_6orfmz_k$(12434877);
-    this._500__1 = Companion_getInstance_2().rgb_6orfmz_k$(10395294);
-    this._600__1 = Companion_getInstance_2().rgb_6orfmz_k$(7697781);
-    this._700__1 = Companion_getInstance_2().rgb_6orfmz_k$(6381921);
-    this._800__1 = Companion_getInstance_2().rgb_6orfmz_k$(4342338);
-    this._900__1 = Companion_getInstance_2().rgb_6orfmz_k$(2171169);
+    this._50__1 = Companion_getInstance_3().rgb_6orfmz_k$(16448250);
+    this._100__1 = Companion_getInstance_3().rgb_6orfmz_k$(16119285);
+    this._200__1 = Companion_getInstance_3().rgb_6orfmz_k$(15658734);
+    this._300__1 = Companion_getInstance_3().rgb_6orfmz_k$(14737632);
+    this._400__1 = Companion_getInstance_3().rgb_6orfmz_k$(12434877);
+    this._500__1 = Companion_getInstance_3().rgb_6orfmz_k$(10395294);
+    this._600__1 = Companion_getInstance_3().rgb_6orfmz_k$(7697781);
+    this._700__1 = Companion_getInstance_3().rgb_6orfmz_k$(6381921);
+    this._800__1 = Companion_getInstance_3().rgb_6orfmz_k$(4342338);
+    this._900__1 = Companion_getInstance_3().rgb_6orfmz_k$(2171169);
   }
   protoOf(Gray).get__50_18jcbz_k$ = function () {
     return this._50__1;
@@ -5570,16 +5703,16 @@
   }
   function BlueGray() {
     BlueGray_instance = this;
-    this._50__1 = Companion_getInstance_2().rgb_6orfmz_k$(15527921);
-    this._100__1 = Companion_getInstance_2().rgb_6orfmz_k$(13621468);
-    this._200__1 = Companion_getInstance_2().rgb_6orfmz_k$(11583173);
-    this._300__1 = Companion_getInstance_2().rgb_6orfmz_k$(9479342);
-    this._400__1 = Companion_getInstance_2().rgb_6orfmz_k$(7901340);
-    this._500__1 = Companion_getInstance_2().rgb_6orfmz_k$(6323595);
-    this._600__1 = Companion_getInstance_2().rgb_6orfmz_k$(5533306);
-    this._700__1 = Companion_getInstance_2().rgb_6orfmz_k$(4545124);
-    this._800__1 = Companion_getInstance_2().rgb_6orfmz_k$(3622735);
-    this._900__1 = Companion_getInstance_2().rgb_6orfmz_k$(2503224);
+    this._50__1 = Companion_getInstance_3().rgb_6orfmz_k$(15527921);
+    this._100__1 = Companion_getInstance_3().rgb_6orfmz_k$(13621468);
+    this._200__1 = Companion_getInstance_3().rgb_6orfmz_k$(11583173);
+    this._300__1 = Companion_getInstance_3().rgb_6orfmz_k$(9479342);
+    this._400__1 = Companion_getInstance_3().rgb_6orfmz_k$(7901340);
+    this._500__1 = Companion_getInstance_3().rgb_6orfmz_k$(6323595);
+    this._600__1 = Companion_getInstance_3().rgb_6orfmz_k$(5533306);
+    this._700__1 = Companion_getInstance_3().rgb_6orfmz_k$(4545124);
+    this._800__1 = Companion_getInstance_3().rgb_6orfmz_k$(3622735);
+    this._900__1 = Companion_getInstance_3().rgb_6orfmz_k$(2503224);
   }
   protoOf(BlueGray).get__50_18jcbz_k$ = function () {
     return this._50__1;
@@ -5846,46 +5979,48 @@
   //endregion
   //region block: exports
   _.$_$ = _.$_$ || {};
-  _.$_$.a = renderWithDeferred;
-  _.$_$.b = set_additionalSilkInitialization;
-  _.$_$.c = Keyframes_0;
-  _.$_$.d = get_entries;
-  _.$_$.e = get_active;
-  _.$_$.f = get_ariaDisabled;
-  _.$_$.g = get_ariaInvalid;
-  _.$_$.h = get_disabled;
-  _.$_$.i = get_focusVisible;
-  _.$_$.j = get_hover;
-  _.$_$.k = get_link;
-  _.$_$.l = not;
-  _.$_$.m = get_placeholder;
-  _.$_$.n = get_visited;
-  _.$_$.o = ComponentKind;
-  _.$_$.p = Base;
-  _.$_$.q = CssStyle_0;
-  _.$_$.r = CssStyle_2;
-  _.$_$.s = addVariantBase;
-  _.$_$.t = addVariant_0;
-  _.$_$.u = base_1;
-  _.$_$.v = base_0;
-  _.$_$.w = base;
-  _.$_$.x = toModifier_0;
-  _.$_$.y = toModifier;
-  _.$_$.z = ColorGroup;
-  _.$_$.a1 = MutablePalette;
-  _.$_$.b1 = toPalette;
-  _.$_$.c1 = suffixedWith;
-  _.$_$.d1 = clip;
-  _.$_$.e1 = get_SilkTheme;
-  _.$_$.f1 = modifyStyleBase;
-  _.$_$.g1 = prepareSilkFoundation;
-  _.$_$.h1 = Base_init_$Init$;
-  _.$_$.i1 = RectF_init_$Create$_2;
-  _.$_$.j1 = Companion_getInstance_7;
-  _.$_$.k1 = Companion_getInstance_11;
-  _.$_$.l1 = Blue_getInstance;
-  _.$_$.m1 = Gray_getInstance;
-  _.$_$.n1 = Red_getInstance;
+  _.$_$.a = SpanText;
+  _.$_$.b = renderWithDeferred;
+  _.$_$.c = set_additionalSilkInitialization;
+  _.$_$.d = Keyframes_0;
+  _.$_$.e = get_entries;
+  _.$_$.f = get_active;
+  _.$_$.g = get_ariaDisabled;
+  _.$_$.h = get_ariaInvalid;
+  _.$_$.i = get_disabled;
+  _.$_$.j = get_focusVisible;
+  _.$_$.k = get_hover;
+  _.$_$.l = get_link;
+  _.$_$.m = not;
+  _.$_$.n = get_placeholder;
+  _.$_$.o = get_visited;
+  _.$_$.p = ComponentKind;
+  _.$_$.q = Base;
+  _.$_$.r = CssStyle_0;
+  _.$_$.s = CssStyle_2;
+  _.$_$.t = addVariantBase;
+  _.$_$.u = addVariant_0;
+  _.$_$.v = base_1;
+  _.$_$.w = base_0;
+  _.$_$.x = base;
+  _.$_$.y = toModifier_1;
+  _.$_$.z = toModifier_0;
+  _.$_$.a1 = toModifier;
+  _.$_$.b1 = ColorGroup;
+  _.$_$.c1 = MutablePalette;
+  _.$_$.d1 = toPalette;
+  _.$_$.e1 = suffixedWith;
+  _.$_$.f1 = clip;
+  _.$_$.g1 = get_SilkTheme;
+  _.$_$.h1 = modifyStyleBase;
+  _.$_$.i1 = prepareSilkFoundation;
+  _.$_$.j1 = Base_init_$Init$;
+  _.$_$.k1 = RectF_init_$Create$_2;
+  _.$_$.l1 = Companion_getInstance_8;
+  _.$_$.m1 = Companion_getInstance_12;
+  _.$_$.n1 = Blue_getInstance;
+  _.$_$.o1 = Gray_getInstance;
+  _.$_$.p1 = Red_getInstance;
   //endregion
   return _;
 }));

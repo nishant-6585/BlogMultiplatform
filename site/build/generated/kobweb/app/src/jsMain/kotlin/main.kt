@@ -1,4 +1,3 @@
-import androidx.compose.runtime.CompositionLocalProvider
 import com.varabyte.kobweb.browser.api
 import com.varabyte.kobweb.core.AppGlobals
 import com.varabyte.kobweb.navigation.RoutePrefix
@@ -13,7 +12,7 @@ import org.jetbrains.compose.web.renderComposable
 import org.w3c.dom.EventSource
 import org.w3c.dom.EventSourceInit
 import org.w3c.dom.MessageEvent
-import org.w3c.dom.`get`
+import org.w3c.dom.get
 
 private fun forceReloadNow() {
     window.stop()
@@ -75,7 +74,7 @@ private fun handleServerStatusEvents() {
     eventSource.onerror = { eventSource.close() }
 }
 
-public fun main() {
+fun main() {
     handleServerStatusEvents()
 
     window.api.logOnError = true
@@ -84,6 +83,8 @@ public fun main() {
     val router = Router()
     com.varabyte.kobweb.core.init.initKobweb(router) { ctx ->
         ctx.router.register("/") { com.example.blogmultiplatform.pages.HomePage() }
+        ctx.router.register("/admin/login") {
+                com.example.blogmultiplatform.pages.admin.LoginScreen() }
 
     }
     router.setLegacyRouteRedirectStrategy(Router.LegacyRouteRedirectStrategy.DISALLOW)

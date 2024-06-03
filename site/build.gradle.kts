@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.jetbrains.compose)
     alias(libs.plugins.kobweb.application)
+    alias(libs.plugins.serialization.plugin)
     // alias(libs.plugins.kobwebx.markdown)
 }
 
@@ -26,27 +27,23 @@ kobweb {
 kotlin {
     configAsKobwebApplication("blogmultiplatform")
 
-    /*jvm() // Add JVM target
+    jvm() // Add JVM target
     js(IR) {
         browser {
-            testTask {
-                useKarma {
-                    useChromeHeadless()
-                    // Configure Karma options if needed
-                }
-            }
+            /*commonWebpackConfig {
+                cssSupport.enabled = true
+            }*/
         }
-    }*/
+        nodejs()
+    }
+    jvm {
+        withJava()
+    }
+
     sourceSets {
         commonMain.dependencies {
             implementation(compose.runtime)
         }
-
-        /*val jvmMain by getting {
-            dependencies {
-                implementation(kotlin("stdlib"))
-            }
-        }*/
 
         jsMain.dependencies {
             implementation(compose.html.core)
@@ -57,12 +54,21 @@ kotlin {
             
         }
 
+        jvmMain.dependencies{
+            implementation(libs.kobweb.api)
+            implementation(libs.kotlinx.coroutines.reactive)
+            implementation(libs.kmongo.database)
+            implementation(libs.kotlinx.serialization)
+        }
+
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test-common"))
                 implementation(kotlin("test-annotations-common"))
             }
         }
+
+
         /*val jvmTest by getting {
             dependencies {
                 implementation(kotlin("test"))

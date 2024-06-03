@@ -4,9 +4,67 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0516a7b7-d25c-41d0-b224-30ee43c43bed" name="Changes" comment="">
+    <list default="true" id="0516a7b7-d25c-41d0-b224-30ee43c43bed" name="Changes" comment="Make changes after adding jvmMain">
+      <change afterPath="$PROJECT_DIR$/site/src/jvmMain/kotlin/com/example/blogmultiplatform/api/UserCheck.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site/src/jvmMain/kotlin/com/example/blogmultiplatform/data/MongoDB.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site/src/jvmMain/kotlin/com/example/blogmultiplatform/data/MongoRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site/src/jvmMain/kotlin/com/example/blogmultiplatform/models/User.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site/src/jvmMain/kotlin/com/example/blogmultiplatform/utils/Constants.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/node_modules/.yarn-integrity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform-test/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform-test/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/blogmultiplatform.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/blogmultiplatform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/blogmultiplatform.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/blogmultiplatform.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/compose-multiplatform-core-annotation-annotation.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/compose-multiplatform-core-annotation-annotation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/compose-multiplatform-core-annotation-annotation.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/compose-multiplatform-core-annotation-annotation.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/compose-multiplatform-core-collection-collection.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/compose-multiplatform-core-collection-collection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/compose-multiplatform-core-collection-collection.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/compose-multiplatform-core-collection-collection.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/compose-multiplatform-core-compose-runtime-runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/compose-multiplatform-core-compose-runtime-runtime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/compose-multiplatform-core-compose-runtime-runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/compose-multiplatform-core-compose-runtime-runtime.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/html-html-core.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/html-html-core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/html-html-core.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/html-html-core.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/html-internal-html-core-runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/html-internal-html-core-runtime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/html-internal-html-core-runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/html-internal-html-core-runtime.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-common-client-server-internal.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-common-client-server-internal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-common-client-server-internal.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-common-client-server-internal.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-browser-ext.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-browser-ext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-browser-ext.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-browser-ext.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-compose-html-ext.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-compose-html-ext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-compose-html-ext.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-compose-html-ext.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-kobweb-compose.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-kobweb-compose.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-kobweb-compose.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-kobweb-compose.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-kobweb-core.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-kobweb-core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-kobweb-core.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-kobweb-core.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-kobweb-silk.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-kobweb-silk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-kobweb-silk.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-kobweb-silk.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-silk-foundation.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-silk-foundation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-silk-foundation.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-silk-foundation.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-silk-widgets-kobweb.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-silk-widgets-kobweb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-silk-widgets-kobweb.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-silk-widgets-kobweb.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-silk-widgets.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-silk-widgets.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-silk-widgets.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kobweb-frontend-silk-widgets.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kotlin-kotlin-stdlib.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kotlin-kotlin-stdlib.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kotlin-kotlin-stdlib.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kotlin-kotlin-stdlib.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kotlin-kotlinx-atomicfu-runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kotlin-kotlinx-atomicfu-runtime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kotlin-kotlinx-atomicfu-runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kotlin-kotlinx-atomicfu-runtime.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kotlinx-atomicfu.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kotlinx-atomicfu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kotlinx-atomicfu.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kotlinx-atomicfu.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kotlinx-coroutines-core.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kotlinx-coroutines-core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kotlinx-coroutines-core.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kotlinx-coroutines-core.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kotlinx-serialization-kotlinx-serialization-core.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kotlinx-serialization-kotlinx-serialization-core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kotlinx-serialization-kotlinx-serialization-core.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kotlinx-serialization-kotlinx-serialization-core.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kotlinx-serialization-kotlinx-serialization-json.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kotlinx-serialization-kotlinx-serialization-json.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kotlinx-serialization-kotlinx-serialization-json.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/kotlin/kotlinx-serialization-kotlinx-serialization-json.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/blogmultiplatform/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin-js-store/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin-js-store/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/site/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/site/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/src/jsMain/kotlin/com/example/blogmultiplatform/pages/styles/LoginStyle.kt" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/jsMain/kotlin/com/example/blogmultiplatform/pages/styles/LoginStyle.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +97,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin File" />
         <option value="Kotlin Enum" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Data Class" />
         <option value="Kotlin Object" />
+        <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -72,6 +133,9 @@
     "dart.analysis.tool.window.visible": "false",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/nishantkumar/Documents/Udemy_Course/KMM_Course/kobweb/BlogMultiplatform/site",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
@@ -89,6 +153,19 @@
       <option name="presentableId" value="Default" />
       <updated>1717046927881</updated>
     </task>
+    <task id="LOCAL-00001" summary="Make changes after adding jvmMain">
+      <option name="closed" value="true" />
+      <created>1717392399414</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1717392399414</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Make changes after adding jvmMain" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make changes after adding jvmMain" />
   </component>
 </project>

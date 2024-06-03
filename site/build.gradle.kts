@@ -24,29 +24,12 @@ kobweb {
 }
 
 kotlin {
-    configAsKobwebApplication("blogmultiplatform")
+    configAsKobwebApplication("blogmultiplatform", includeServer = true)
 
-    /*jvm() // Add JVM target
-    js(IR) {
-        browser {
-            testTask {
-                useKarma {
-                    useChromeHeadless()
-                    // Configure Karma options if needed
-                }
-            }
-        }
-    }*/
     sourceSets {
         commonMain.dependencies {
             implementation(compose.runtime)
         }
-
-        /*val jvmMain by getting {
-            dependencies {
-                implementation(kotlin("stdlib"))
-            }
-        }*/
 
         jsMain.dependencies {
             implementation(compose.html.core)
@@ -54,36 +37,10 @@ kotlin {
             implementation(libs.kobweb.silk)
             implementation(libs.silk.icons.fa)
             // implementation(libs.kobwebx.markdown)
-            
+            implementation(project(":worker"))
         }
-
-        /*val commonTest by getting {
-            dependencies {
-                implementation(kotlin("test-common"))
-                implementation(kotlin("test-annotations-common"))
-            }
-        }
-        val jvmTest by getting {
-            dependencies {
-                implementation(kotlin("test"))
-                implementation(kotlin("test-junit"))
-            }
-        }
-        val jsTest by getting {
-            dependencies {
-                implementation(kotlin("test-js"))
-            }
-        }*/
-    }
-
-    /*tasks {
-        // Adjust test task dependencies based on the available tasks
-        register("testClasses") {
-            dependsOn("jvmTestClasses", "jsTestClasses")
+        jvmMain.dependencies {
+            compileOnly(libs.kobweb.api) // Provided by Kobweb backend at runtime
         }
     }
-
-    repositories {
-        mavenCentral()
-    }*/
 }

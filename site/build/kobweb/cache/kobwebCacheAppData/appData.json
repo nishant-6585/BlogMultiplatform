@@ -1,1 +1,0 @@
-{"appEntry":{"fqn":"com.example.blogmultiplatform.AppEntry"},"frontendData":{"pages":[{"fqn":"com.example.blogmultiplatform.pages.HomePage","route":"/"},{"fqn":"com.example.blogmultiplatform.pages.admin.LoginScreen","route":"/admin/login"}]}}

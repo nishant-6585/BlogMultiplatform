@@ -74,6 +74,22 @@
     "a66860f155cb10a237acb5f7d0f6d0e3": {
       "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-js-runner/1.9.23/e9b1fc55af69eb09d63b271d17c217d9483241cc/kotlin-test-js-runner-1.9.23.jar",
       "target": "kotlin-test-js-runner/0.0.1"
+    },
+    "97c4deefe27337c122de4e5e86cfb869": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-common/1.9.23/1d69c4263dad2b28da95abc2e2d96cad2daef75c/kotlin-test-common-1.9.23.jar"
+    },
+    "301a7a9a653654c5fc8e2aa6f518cfde": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-annotations-common/1.9.23/3c4a39ee64429f6360e9603443cbbf3685a51bc0/kotlin-test-annotations-common-1.9.23.jar"
+    },
+    "15a170609c88dc9f1096bfe268666e11": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-js/1.9.23/2489f6f4262beb6b973f2d2efb556df8c77c062e/kotlin-test-js-1.9.23.jar",
+      "target": "kotlin-test/1.9.23"
+    },
+    "ddd338c5806bff8a976d745b4a615825": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/kobweb-worker/0.18.0/60eae95a20ce765558881fa87437a657edac2589/kobweb-worker-js-0.18.0.klib"
+    },
+    "6f7ef829a31fe8487050b82f5366ded1": {
+      "src": "/Users/nishantkumar/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/kobweb-serialization-js/0.18.0/c978c3e73340c32e6174bb932f7de5861bb0d51c/kobweb-serialization-js-0.18.0.klib"
     }
   }
 }

@@ -84,7 +84,7 @@
   var initSilkWidgetsKobweb = kotlin_com_varabyte_kobweb_silk_widgets_kobweb.$_$.b;
   var SilkApp = kotlin_com_varabyte_kobweb_kobweb_silk.$_$.a;
   var get_SmoothColorStyle = kotlin_com_varabyte_kobweb_silk_widgets.$_$.f;
-  var toModifier = kotlin_com_varabyte_kobweb_silk_foundation.$_$.a1;
+  var toModifier = kotlin_com_varabyte_kobweb_silk_foundation.$_$.c1;
   var get_vh = kotlin_org_jetbrains_compose_html_html_core.$_$.c5;
   var minHeight = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.m1;
   var Surface = kotlin_com_varabyte_kobweb_silk_widgets.$_$.b;
@@ -114,8 +114,8 @@
   var Colors_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.t2;
   var backgroundColor = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.j;
   var fontFamily = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.a1;
+  var fontSize = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.b1;
   var Companion_getInstance_2 = kotlin_org_jetbrains_compose_html_html_core.$_$.m;
-  var border = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.o;
   var outline = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.q1;
   var Input = kotlin_com_varabyte_kobweb_silk_widgets.$_$.a;
   var Password_getInstance = kotlin_org_jetbrains_compose_html_html_core.$_$.c;
@@ -124,7 +124,7 @@
   var borderRadius = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.m;
   var Companion_getInstance_3 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.j2;
   var fontWeight = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.c1;
-  var fontSize = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.b1;
+  var border = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.o;
   var toAttrs = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.o2;
   var Button = kotlin_org_jetbrains_compose_html_html_core.$_$.f5;
   var Companion_getInstance_4 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.p2;
@@ -133,6 +133,8 @@
   var Center_getInstance_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.q2;
   var CenterHorizontally_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.u2;
   var Column = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.b;
+  var get_focus = kotlin_com_varabyte_kobweb_silk_foundation.$_$.j;
+  var CssStyle = kotlin_com_varabyte_kobweb_silk_foundation.$_$.s;
   //endregion
   //region block: pre-declaration
   setMetadataFor(ComposableSingletons$MainKt, 'ComposableSingletons$MainKt', objectMeta);
@@ -241,7 +243,7 @@
       $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(it) ? 4 : 2);
     if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
       if (isTraceInProgress()) {
-        traceEventStart(1940211355, $dirty, -1, 'ComposableSingletons$MainKt.lambda-3.<anonymous> (main.kt:113)');
+        traceEventStart(1940211355, $dirty, -1, 'ComposableSingletons$MainKt.lambda-3.<anonymous> (main.kt:115)');
       }
       // Inline function 'kotlin.run' call
       // Inline function 'kotlin.contracts.contract' call
@@ -285,7 +287,7 @@
       var tmp;
       if (!(($changed & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
         if (isTraceInProgress()) {
-          traceEventStart(2103839155, $changed, -1, 'ComposableSingletons$MainKt.lambda-3.<anonymous>.<anonymous> (main.kt:113)');
+          traceEventStart(2103839155, $changed, -1, 'ComposableSingletons$MainKt.lambda-3.<anonymous>.<anonymous> (main.kt:115)');
         }
         $it($composer_0, 0);
         var tmp_0;
@@ -416,6 +418,7 @@
   function main$lambda_1(ctx) {
     initSilkWidgets(ctx);
     initSilkWidgetsKobweb(ctx);
+    ctx.get_theme_iz24rk_k$().registerStyle$default_qiw5ck_k$('login-input', get_LoginInputStyle());
     return Unit_getInstance();
   }
   function ComposableLambda$invoke$ref_3($boundThis) {
@@ -429,7 +432,7 @@
       var tmp;
       if (!(($changed & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
         if (isTraceInProgress()) {
-          traceEventStart(-1190994075, $changed, -1, 'main.<anonymous>.<anonymous> (main.kt:113)');
+          traceEventStart(-1190994075, $changed, -1, 'main.<anonymous>.<anonymous> (main.kt:115)');
         }
         $router.renderActivePage_fc13h0_k$(ComposableSingletons$MainKt_getInstance().lambda_3_r8sbbn_1, $composer_0, 70, 0);
         var tmp_0;
@@ -454,7 +457,7 @@
     return function ($this$renderComposable, $composer, $changed) {
       var $composer_0 = $composer;
       if (isTraceInProgress()) {
-        traceEventStart(1108811911, $changed, -1, 'main.<anonymous> (main.kt:112)');
+        traceEventStart(1108811911, $changed, -1, 'main.<anonymous> (main.kt:114)');
       }
       // Inline function 'kotlin.run' call
       // Inline function 'kotlin.contracts.contract' call
@@ -738,9 +741,9 @@
     $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-926139780);
     if (!($changed === 0) ? true : !$composer_0.get_skipping_3owdve_k$()) {
       if (isTraceInProgress()) {
-        traceEventStart(-926139780, $changed, -1, 'com.example.blogmultiplatform.pages.admin.LoginScreen (Login.kt:45)');
+        traceEventStart(-926139780, $changed, -1, 'com.example.blogmultiplatform.pages.admin.LoginScreen (Login.kt:47)');
       }
-      $composer_0.startReplaceableGroup_ip860b_k$(-822937963);
+      $composer_0.startReplaceableGroup_ip860b_k$(-822937848);
       // Inline function 'androidx.compose.runtime.cache' call
       var this_0 = $composer_0;
       // Inline function 'kotlin.let' call
@@ -760,7 +763,7 @@
       var tmp0_group = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
       $composer_0.endReplaceableGroup_ern0ak_k$();
       var userNameValue$delegate = tmp0_group;
-      $composer_0.startReplaceableGroup_ip860b_k$(-822937906);
+      $composer_0.startReplaceableGroup_ip860b_k$(-822937791);
       // Inline function 'androidx.compose.runtime.cache' call
       var this_1 = $composer_0;
       // Inline function 'kotlin.let' call
@@ -780,7 +783,7 @@
       var tmp1_group = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
       $composer_0.endReplaceableGroup_ern0ak_k$();
       var passwordValue$delegate = tmp1_group;
-      $composer_0.startReplaceableGroup_ip860b_k$(-822937853);
+      $composer_0.startReplaceableGroup_ip860b_k$(-822937738);
       // Inline function 'androidx.compose.runtime.cache' call
       var this_2 = $composer_0;
       // Inline function 'kotlin.let' call
@@ -851,7 +854,7 @@
   function ComposableSingletons$LoginKt$lambda_1$lambda_f1msqn($this$Button, $composer, $changed) {
     var $composer_0 = $composer;
     if (isTraceInProgress()) {
-      traceEventStart(-1841479681, $changed, -1, 'com.example.blogmultiplatform.pages.admin.ComposableSingletons$LoginKt.lambda-1.<anonymous> (Login.kt:142)');
+      traceEventStart(-1841479681, $changed, -1, 'com.example.blogmultiplatform.pages.admin.ComposableSingletons$LoginKt.lambda-1.<anonymous> (Login.kt:136)');
     }
     SpanText('Sign In', null, null, null, $composer_0, 6, 14);
     if (isTraceInProgress()) {
@@ -931,110 +934,93 @@
     return function ($this$Column, $composer, $changed) {
       var $composer_0 = $composer;
       if (isTraceInProgress()) {
-        traceEventStart(-59910919, $changed, -1, 'com.example.blogmultiplatform.pages.admin.LoginScreen.<anonymous>.<anonymous> (Login.kt:60)');
+        traceEventStart(-59910919, $changed, -1, 'com.example.blogmultiplatform.pages.admin.LoginScreen.<anonymous>.<anonymous> (Login.kt:62)');
       }
       var tmp0_modifier = width(margin(Companion_getInstance_1(), VOID, VOID, get_px(50)), get_px(110));
       var tmp1_src = Image_getInstance().get_logo_wopywk_k$();
       Image(tmp1_src, 'Logo Image', tmp0_modifier, null, null, null, false, null, $composer_0, 566, 248);
-      var tmp10_type = Text_getInstance();
-      var tmp11_value = LoginScreen$lambda($userNameValue$delegate);
-      var tmp2_$receiver = fontFamily(backgroundColor(padding(height(width(margin(Companion_getInstance_1(), VOID, VOID, get_px(12)), get_px(350)), get_px(54)), VOID, get_px(20)), Colors_getInstance().get_White_ij46ow_k$()), [Constants_getInstance().get_FONT_FAMILY_nousyd_k$()]);
-      var tmp3_width = get_px(0);
-      var tmp4_color = Colors_getInstance().get_Transparent_cxh4g9_k$();
+      var tmp2_type = Text_getInstance();
+      var tmp3_value = LoginScreen$lambda($userNameValue$delegate);
+      var tmp = fontSize(fontFamily(backgroundColor(padding(height(width(margin(toModifier(get_LoginInputStyle(), $composer_0, 0), VOID, VOID, get_px(12)), get_px(350)), get_px(54)), VOID, get_px(20)), Colors_getInstance().get_White_ij46ow_k$()), [Constants_getInstance().get_FONT_FAMILY_nousyd_k$()]), get_px(14));
+      var tmp_0 = get_px(0);
       // Inline function 'org.jetbrains.compose.web.css.Companion.None' call
       Companion_getInstance_2();
       // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
-      var tmp6_$receiver = border(tmp2_$receiver, tmp3_width, 'none', tmp4_color);
-      var tmp7_width = get_px(0);
-      var tmp8_color = Colors_getInstance().get_Transparent_cxh4g9_k$();
-      // Inline function 'org.jetbrains.compose.web.css.Companion.None' call
-      Companion_getInstance_2();
-      // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
-      // Inline function 'kotlin.js.unsafeCast' call
-      // Inline function 'kotlin.js.asDynamic' call
-      var tmp12_modifier = outline(tmp6_$receiver, tmp7_width, 'none', tmp8_color);
-      $composer_0.startReplaceableGroup_ip860b_k$(479259815);
+      var tmp4_modifier = outline(tmp, tmp_0, 'none', Colors_getInstance().get_Transparent_cxh4g9_k$());
+      $composer_0.startReplaceableGroup_ip860b_k$(479259799);
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var it = $composer_0.rememberedValue_4dg93v_k$();
-      var tmp;
+      var tmp_1;
       if (false ? true : it === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
         // Inline function 'com.example.blogmultiplatform.pages.admin.LoginScreen.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
         var value = LoginScreen$lambda$lambda$lambda($userNameValue$delegate);
         $composer_0.updateRememberedValue_l1wh71_k$(value);
-        tmp = value;
+        tmp_1 = value;
       } else {
-        tmp = it;
+        tmp_1 = it;
       }
-      var tmp_0 = tmp;
-      var tmp0_group = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
+      var tmp_2 = tmp_1;
+      var tmp0_group = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
       $composer_0.endReplaceableGroup_ern0ak_k$();
-      Input(tmp10_type, tmp11_value, tmp0_group, tmp12_modifier, null, 'userName', null, false, false, false, false, false, null, null, null, null, null, null, $composer_0, 201096, 0, 262096);
-      var tmp21_type = Password_getInstance();
-      var tmp22_value = LoginScreen$lambda_1($passwordValue$delegate);
-      var tmp13_$receiver = fontFamily(backgroundColor(padding(height(width(margin(Companion_getInstance_1(), VOID, VOID, get_px(12)), get_px(350)), get_px(54)), VOID, get_px(20)), Colors_getInstance().get_White_ij46ow_k$()), [Constants_getInstance().get_FONT_FAMILY_nousyd_k$()]);
-      var tmp14_width = get_px(0);
-      var tmp15_color = Colors_getInstance().get_Transparent_cxh4g9_k$();
+      Input(tmp2_type, tmp3_value, tmp0_group, tmp4_modifier, null, 'userName', null, false, false, false, false, false, null, null, null, null, null, null, $composer_0, 201096, 0, 262096);
+      var tmp9_type = Password_getInstance();
+      var tmp10_value = LoginScreen$lambda_1($passwordValue$delegate);
+      var tmp5_$receiver = fontSize(fontFamily(backgroundColor(padding(height(width(margin(toModifier(get_LoginInputStyle(), $composer_0, 0), VOID, VOID, get_px(12)), get_px(350)), get_px(54)), VOID, get_px(20)), Colors_getInstance().get_White_ij46ow_k$()), [Constants_getInstance().get_FONT_FAMILY_nousyd_k$()]), get_px(14));
+      var tmp6_width = get_px(0);
+      var tmp7_color = Colors_getInstance().get_Transparent_cxh4g9_k$();
       // Inline function 'org.jetbrains.compose.web.css.Companion.None' call
       Companion_getInstance_2();
       // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
-      var tmp17_$receiver = border(tmp13_$receiver, tmp14_width, 'none', tmp15_color);
-      var tmp18_width = get_px(0);
-      var tmp19_color = Colors_getInstance().get_Transparent_cxh4g9_k$();
-      // Inline function 'org.jetbrains.compose.web.css.Companion.None' call
-      Companion_getInstance_2();
-      // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
-      // Inline function 'kotlin.js.unsafeCast' call
-      // Inline function 'kotlin.js.asDynamic' call
-      var tmp23_modifier = outline(tmp17_$receiver, tmp18_width, 'none', tmp19_color);
-      $composer_0.startReplaceableGroup_ip860b_k$(479260737);
+      var tmp11_modifier = outline(tmp5_$receiver, tmp6_width, 'none', tmp7_color);
+      $composer_0.startReplaceableGroup_ip860b_k$(479260590);
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var it_0 = $composer_0.rememberedValue_4dg93v_k$();
-      var tmp_1;
+      var tmp_3;
       if (false ? true : it_0 === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
         // Inline function 'com.example.blogmultiplatform.pages.admin.LoginScreen.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
         var value_0 = LoginScreen$lambda$lambda$lambda_0($passwordValue$delegate);
         $composer_0.updateRememberedValue_l1wh71_k$(value_0);
-        tmp_1 = value_0;
+        tmp_3 = value_0;
       } else {
-        tmp_1 = it_0;
+        tmp_3 = it_0;
       }
-      var tmp_2 = tmp_1;
-      var tmp1_group = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
+      var tmp_4 = tmp_3;
+      var tmp1_group = (tmp_4 == null ? true : !(tmp_4 == null)) ? tmp_4 : THROW_CCE();
       $composer_0.endReplaceableGroup_ern0ak_k$();
-      Input(tmp21_type, tmp22_value, tmp1_group, tmp23_modifier, null, 'Password', null, false, false, false, false, false, null, null, null, null, null, null, $composer_0, 201096, 0, 262096);
-      var tmp24_$receiver = fontSize(fontWeight(fontFamily(borderRadius(color(backgroundColor(height(width(margin_0(Companion_getInstance_1(), get_px(24)), get_px(350)), get_px(54)), Theme_Primary_getInstance().get_rgb_18ix0c_k$()), Colors_getInstance().get_White_ij46ow_k$()), get_px(4)), [Constants_getInstance().get_FONT_FAMILY_nousyd_k$()]), Companion_getInstance_3().get_Medium_1fiba6_k$()), get_px(16));
-      var tmp25_width = get_px(0);
-      var tmp26_color = Colors_getInstance().get_Transparent_cxh4g9_k$();
+      Input(tmp9_type, tmp10_value, tmp1_group, tmp11_modifier, null, 'Password', null, false, false, false, false, false, null, null, null, null, null, null, $composer_0, 201096, 0, 262096);
+      var tmp12_$receiver = fontSize(fontWeight(fontFamily(borderRadius(color(backgroundColor(height(width(margin_0(Companion_getInstance_1(), get_px(24)), get_px(350)), get_px(54)), Theme_Primary_getInstance().get_rgb_18ix0c_k$()), Colors_getInstance().get_White_ij46ow_k$()), get_px(4)), [Constants_getInstance().get_FONT_FAMILY_nousyd_k$()]), Companion_getInstance_3().get_Medium_1fiba6_k$()), get_px(14));
+      var tmp13_width = get_px(0);
+      var tmp14_color = Colors_getInstance().get_Transparent_cxh4g9_k$();
       // Inline function 'org.jetbrains.compose.web.css.Companion.None' call
       Companion_getInstance_2();
       // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
-      var tmp28_$receiver = border(tmp24_$receiver, tmp25_width, 'none', tmp26_color);
-      var tmp29_width = get_px(0);
-      var tmp30_color = Colors_getInstance().get_Transparent_cxh4g9_k$();
+      var tmp16_$receiver = border(tmp12_$receiver, tmp13_width, 'none', tmp14_color);
+      var tmp17_width = get_px(0);
+      var tmp18_color = Colors_getInstance().get_Transparent_cxh4g9_k$();
       // Inline function 'org.jetbrains.compose.web.css.Companion.None' call
       Companion_getInstance_2();
       // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
-      Button(toAttrs(outline(tmp28_$receiver, tmp29_width, 'none', tmp30_color)), ComposableSingletons$LoginKt_getInstance().lambda_1_r8sbbp_1, $composer_0, 48, 0);
-      var tmp32_modifier = textAlign(color(width(Companion_getInstance_1(), get_px(350)), Colors_getInstance().get_Red_18jks8_k$()), Companion_getInstance_4().get_Center_3arb0i_k$());
-      SpanText('', tmp32_modifier, null, null, $composer_0, 70, 12);
-      var tmp_3;
+      Button(toAttrs(outline(tmp16_$receiver, tmp17_width, 'none', tmp18_color)), ComposableSingletons$LoginKt_getInstance().lambda_1_r8sbbp_1, $composer_0, 48, 0);
+      var tmp20_modifier = textAlign(color(width(Companion_getInstance_1(), get_px(350)), Colors_getInstance().get_Red_18jks8_k$()), Companion_getInstance_4().get_Center_3arb0i_k$());
+      SpanText('', tmp20_modifier, null, null, $composer_0, 70, 12);
+      var tmp_5;
       if (isTraceInProgress()) {
         traceEventEnd();
-        tmp_3 = Unit_getInstance();
+        tmp_5 = Unit_getInstance();
       }
       return Unit_getInstance();
     };
@@ -1048,7 +1034,7 @@
     return function ($this$Box, $composer, $changed) {
       var $composer_0 = $composer;
       if (isTraceInProgress()) {
-        traceEventStart(690167170, $changed, -1, 'com.example.blogmultiplatform.pages.admin.LoginScreen.<anonymous> (Login.kt:53)');
+        traceEventStart(690167170, $changed, -1, 'com.example.blogmultiplatform.pages.admin.LoginScreen.<anonymous> (Login.kt:55)');
       }
       var tmp0_$receiver = Companion_getInstance_1();
       var tmp1_leftRight = get_px(50);
@@ -1103,6 +1089,47 @@
       LoginScreen($composer, updateChangedFlags($$changed | 1));
       return Unit_getInstance();
     };
+  }
+  function get_LoginInputStyle() {
+    _init_properties_LoginStyle_kt__eon42g();
+    return LoginInputStyle;
+  }
+  var LoginInputStyle;
+  function LoginInputStyle$lambda($this$CssStyle) {
+    _init_properties_LoginStyle_kt__eon42g();
+    $this$CssStyle.base_y8uu8g_k$(LoginInputStyle$lambda$lambda);
+    var tmp = get_focus($this$CssStyle);
+    tmp.invoke_ts7809_k$(LoginInputStyle$lambda$lambda_0);
+    return Unit_getInstance();
+  }
+  function LoginInputStyle$lambda$lambda() {
+    _init_properties_LoginStyle_kt__eon42g();
+    var tmp = Companion_getInstance_1();
+    var tmp_0 = get_px(2);
+    // Inline function 'org.jetbrains.compose.web.css.Companion.Solid' call
+    Companion_getInstance_2();
+    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return border(tmp, tmp_0, 'solid', Colors_getInstance().get_Transparent_cxh4g9_k$());
+  }
+  function LoginInputStyle$lambda$lambda_0() {
+    _init_properties_LoginStyle_kt__eon42g();
+    var tmp = Companion_getInstance_1();
+    var tmp_0 = get_px(2);
+    // Inline function 'org.jetbrains.compose.web.css.Companion.Solid' call
+    Companion_getInstance_2();
+    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return border(tmp, tmp_0, 'solid', Theme_Primary_getInstance().get_rgb_18ix0c_k$());
+  }
+  var properties_initialized_LoginStyle_kt_67itai;
+  function _init_properties_LoginStyle_kt__eon42g() {
+    if (!properties_initialized_LoginStyle_kt_67itai) {
+      properties_initialized_LoginStyle_kt_67itai = true;
+      LoginInputStyle = CssStyle(VOID, LoginInputStyle$lambda);
+    }
   }
   function Constants() {
     Constants_instance = this;

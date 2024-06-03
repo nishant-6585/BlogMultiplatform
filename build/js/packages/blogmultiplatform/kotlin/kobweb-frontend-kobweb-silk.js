@@ -34,7 +34,7 @@
   var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y;
   var Unit_getInstance = kotlin_kotlin.$_$.l4;
   var setSilkWidgetVariables = kotlin_com_varabyte_kobweb_silk_widgets.$_$.e;
-  var prepareSilkFoundation = kotlin_com_varabyte_kobweb_silk_foundation.$_$.i1;
+  var prepareSilkFoundation = kotlin_com_varabyte_kobweb_silk_foundation.$_$.k1;
   var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a1;
   //endregion
   //region block: pre-declaration

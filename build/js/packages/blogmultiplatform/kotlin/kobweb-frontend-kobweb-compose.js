@@ -109,9 +109,9 @@
   var opacity = kotlin_org_jetbrains_compose_html_html_core.$_$.s4;
   var appearance = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.h;
   var gap = kotlin_org_jetbrains_compose_html_html_core.$_$.d4;
-  var fontFamily = kotlin_org_jetbrains_compose_html_html_core.$_$.a4;
   var fontWeight = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.c1;
   var fontSize = kotlin_org_jetbrains_compose_html_html_core.$_$.b4;
+  var fontFamily = kotlin_org_jetbrains_compose_html_html_core.$_$.a4;
   var gridTemplateColumns = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.d1;
   var userSelect = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.x1;
   var cursor = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.a1;
@@ -210,7 +210,6 @@
   setMetadataFor(WebModifier, 'WebModifier', interfaceMeta, VOID, [Element]);
   setMetadataFor(AttrsModifier, 'AttrsModifier', classMeta, VOID, [WebModifier]);
   setMetadataFor(StyleModifier, 'StyleModifier', classMeta, VOID, [WebModifier]);
-  setMetadataFor(Colors, 'Colors', objectMeta);
   function darkened$default(byPercent, $super) {
     byPercent = byPercent === VOID ? 0.3 : byPercent;
     return $super === VOID ? this.darkened_iwrtmu_k$(byPercent) : $super.darkened_iwrtmu_k$.call(this, byPercent);
@@ -219,6 +218,7 @@
   setMetadataFor(Rgb, 'Rgb', classMeta, VOID, [Color_0]);
   setMetadataFor(Hsl, 'Hsl', classMeta, VOID, [Color_0]);
   setMetadataFor(Companion_0, 'Companion', objectMeta);
+  setMetadataFor(Colors, 'Colors', objectMeta);
   setMetadataFor(BorderScope, 'BorderScope', classMeta);
   setMetadataFor(OverflowScope, 'OverflowScope', classMeta);
   //endregion
@@ -495,14 +495,6 @@
       return Unit_getInstance();
     };
   }
-  function ColumnScope$align$lambda($alignment) {
-    return function ($this$attrsModifier) {
-      $this$attrsModifier.classes_ayghm2_k$([toClassName_1($alignment) + '-self']);
-      return Unit_getInstance();
-    };
-  }
-  function ColumnScope() {
-  }
   function Column(modifier, verticalArrangement, horizontalAlignment, ref, content, $composer, $changed, $default) {
     var modifier_0 = {_v: modifier};
     var verticalArrangement_0 = {_v: verticalArrangement};
@@ -596,6 +588,14 @@
     else {
       tmp0_safe_receiver.updateScope_t8jcf_k$(Column$lambda_0(modifier_0, verticalArrangement_0, horizontalAlignment_0, ref_0, content, $changed, $default));
     }
+  }
+  function ColumnScope$align$lambda($alignment) {
+    return function ($this$attrsModifier) {
+      $this$attrsModifier.classes_ayghm2_k$([toClassName_1($alignment) + '-self']);
+      return Unit_getInstance();
+    };
+  }
+  function ColumnScope() {
   }
   function ColumnDefaults() {
     ColumnDefaults_instance = this;
@@ -1514,6 +1514,9 @@
   }
   function Modifier() {
   }
+  function thenIf(_this__u8e3s4, condition, lazyProduce) {
+    return _this__u8e3s4.then_mmfvo6_k$(condition ? lazyProduce() : Companion_getInstance_8());
+  }
   function _get_current__qcrdxk($this) {
     return $this.current_1;
   }
@@ -1545,9 +1548,6 @@
   protoOf(ChainedModifier).hashCode = function () {
     return hashCode(this.current_1) + imul(31, hashCode(this.next_1)) | 0;
   };
-  function thenIf(_this__u8e3s4, condition, lazyProduce) {
-    return _this__u8e3s4.then_mmfvo6_k$(condition ? lazyProduce() : Companion_getInstance_8());
-  }
   function toAttrs(_this__u8e3s4, finalHandler) {
     finalHandler = finalHandler === VOID ? null : finalHandler;
     var firstModifier = _this__u8e3s4;
@@ -1660,6 +1660,402 @@
         tmp0_safe_receiver($this$null);
       return Unit_getInstance();
     };
+  }
+  function toInRangeInt(_this__u8e3s4, $this) {
+    // Inline function 'kotlin.check' call
+    // Inline function 'kotlin.contracts.contract' call
+    if (!(new Long(0, -1)).and_4spn93_k$(_this__u8e3s4).equals(new Long(0, 0))) {
+      // Inline function 'com.varabyte.kobweb.compose.ui.graphics.Companion.toInRangeInt.<anonymous>' call
+      // Inline function 'kotlin.text.uppercase' call
+      // Inline function 'kotlin.js.asDynamic' call
+      var message = 'Got an invalid hex color (0x' + toString(_this__u8e3s4, 16).toUpperCase() + ') value larger than 0xFFFFFFFF';
+      throw IllegalStateException_init_$Create$(toString_0(message));
+    }
+    return _this__u8e3s4.toInt_1tsl84_k$();
+  }
+  function Rgb(value) {
+    this.value_1 = value;
+  }
+  protoOf(Rgb).get_value_j01efc_k$ = function () {
+    return this.value_1;
+  };
+  protoOf(Rgb).get_red_18ix20_k$ = function () {
+    return this.value_1 >> 16 & 255;
+  };
+  protoOf(Rgb).get_green_is36qi_k$ = function () {
+    return this.value_1 >> 8 & 255;
+  };
+  protoOf(Rgb).get_blue_wojj4z_k$ = function () {
+    return this.value_1 >> 0 & 255;
+  };
+  protoOf(Rgb).get_alpha_iooth1_k$ = function () {
+    return this.value_1 >> 24 & 255;
+  };
+  protoOf(Rgb).get_redf_wotlby_k$ = function () {
+    return toColorFloat(this.get_red_18ix20_k$());
+  };
+  protoOf(Rgb).get_greenf_dxud3g_k$ = function () {
+    return toColorFloat(this.get_green_is36qi_k$());
+  };
+  protoOf(Rgb).get_bluef_ip8ppf_k$ = function () {
+    return toColorFloat(this.get_blue_wojj4z_k$());
+  };
+  protoOf(Rgb).get_alphaf_b0gxxt_k$ = function () {
+    return toColorFloat(this.get_alpha_iooth1_k$());
+  };
+  protoOf(Rgb).inverted_adp911_k$ = function () {
+    return Companion_getInstance_9().rgba_3xu3m4_k$(255 - this.get_red_18ix20_k$() | 0, 255 - this.get_green_is36qi_k$() | 0, 255 - this.get_blue_wojj4z_k$() | 0, this.get_alpha_iooth1_k$());
+  };
+  protoOf(Rgb).darkened_iwrtmu_k$ = function (byPercent) {
+    // Inline function 'kotlin.require' call
+    // Inline function 'kotlin.contracts.contract' call
+    if (!(0.0 <= byPercent ? byPercent <= 1.0 : false)) {
+      // Inline function 'com.varabyte.kobweb.compose.ui.graphics.Rgb.darkened.<anonymous>' call
+      var message = 'Invalid color shifting percent. Expected between 0 and 1, got ' + byPercent;
+      throw IllegalArgumentException_init_$Create$(toString_0(message));
+    }
+    if (byPercent === 0.0)
+      return this;
+    var darkeningMultiplier = 1.0 - byPercent;
+    return Companion_getInstance_9().rgba_bap9l8_k$(this.get_redf_wotlby_k$() * darkeningMultiplier, this.get_greenf_dxud3g_k$() * darkeningMultiplier, this.get_bluef_ip8ppf_k$() * darkeningMultiplier, this.get_alphaf_b0gxxt_k$());
+  };
+  protoOf(Rgb).copy_my5h57_k$ = function (red, green, blue, alpha) {
+    return Companion_getInstance_9().rgba_3xu3m4_k$(red, green, blue, alpha);
+  };
+  protoOf(Rgb).copy$default_mtju0j_k$ = function (red, green, blue, alpha, $super) {
+    red = red === VOID ? this.get_red_18ix20_k$() : red;
+    green = green === VOID ? this.get_green_is36qi_k$() : green;
+    blue = blue === VOID ? this.get_blue_wojj4z_k$() : blue;
+    alpha = alpha === VOID ? this.get_alpha_iooth1_k$() : alpha;
+    return $super === VOID ? this.copy_my5h57_k$(red, green, blue, alpha) : $super.copy_my5h57_k$.call(this, red, green, blue, alpha);
+  };
+  protoOf(Rgb).copyf_olenlb_k$ = function (red, green, blue, alpha) {
+    return Companion_getInstance_9().rgba_bap9l8_k$(red, green, blue, alpha);
+  };
+  protoOf(Rgb).copyf$default_6pu18v_k$ = function (red, green, blue, alpha, $super) {
+    red = red === VOID ? this.get_redf_wotlby_k$() : red;
+    green = green === VOID ? this.get_greenf_dxud3g_k$() : green;
+    blue = blue === VOID ? this.get_bluef_ip8ppf_k$() : blue;
+    alpha = alpha === VOID ? this.get_alphaf_b0gxxt_k$() : alpha;
+    return $super === VOID ? this.copyf_olenlb_k$(red, green, blue, alpha) : $super.copyf_olenlb_k$.call(this, red, green, blue, alpha);
+  };
+  protoOf(Rgb).toRgb_1tsrpu_k$ = function () {
+    return this;
+  };
+  protoOf(Rgb).toHsl_1tskli_k$ = function () {
+    // Inline function 'kotlin.comparisons.maxOf' call
+    var a = this.get_redf_wotlby_k$();
+    var b = this.get_greenf_dxud3g_k$();
+    var c = this.get_bluef_ip8ppf_k$();
+    var chromaMax = Math.max(a, b, c);
+    // Inline function 'kotlin.comparisons.minOf' call
+    var a_0 = this.get_redf_wotlby_k$();
+    var b_0 = this.get_greenf_dxud3g_k$();
+    var c_0 = this.get_bluef_ip8ppf_k$();
+    var chromaMin = Math.min(a_0, b_0, c_0);
+    var chromaDelta = chromaMax - chromaMin;
+    var lightness = (chromaMin + chromaMax) / 2.0;
+    // Inline function 'kotlin.math.abs' call
+    var x = 2.0 * lightness - 1.0;
+    var saturation = chromaDelta / (1.0 - Math.abs(x));
+    var tmp;
+    if (chromaDelta === 0.0) {
+      tmp = 0.0;
+    } else {
+      var tmp_0;
+      if (chromaMax === this.get_redf_wotlby_k$()) {
+        tmp_0 = (this.get_greenf_dxud3g_k$() - this.get_bluef_ip8ppf_k$()) / chromaDelta % 6;
+      } else if (chromaMax === this.get_greenf_dxud3g_k$()) {
+        tmp_0 = (this.get_bluef_ip8ppf_k$() - this.get_redf_wotlby_k$()) / chromaDelta + 2.0;
+      } else if (chromaMax === this.get_bluef_ip8ppf_k$()) {
+        tmp_0 = (this.get_redf_wotlby_k$() - this.get_greenf_dxud3g_k$()) / chromaDelta + 4.0;
+      } else {
+        var message = 'Unexpected chromaMax value ' + chromaMax;
+        throw IllegalStateException_init_$Create$(toString_0(message));
+      }
+      tmp = 60.0 * tmp_0;
+    }
+    var hue = tmp;
+    return Companion_getInstance_9().hsla_rzsfr4_k$(hue, saturation, lightness, this.get_alphaf_b0gxxt_k$());
+  };
+  protoOf(Rgb).toString = function () {
+    return this.get_alpha_iooth1_k$() === 255 ? 'rgb(' + this.get_red_18ix20_k$() + ', ' + this.get_green_is36qi_k$() + ', ' + this.get_blue_wojj4z_k$() + ')' : 'rgba(' + this.get_red_18ix20_k$() + ', ' + this.get_green_is36qi_k$() + ', ' + this.get_blue_wojj4z_k$() + ', ' + this.get_alphaf_b0gxxt_k$() + ')';
+  };
+  protoOf(Rgb).equals = function (other) {
+    if (this === other)
+      return true;
+    var tmp;
+    var tmp_0;
+    var tmp_1;
+    var tmp_2;
+    if (other instanceof Rgb) {
+      tmp_2 = this.get_red_18ix20_k$() === other.get_red_18ix20_k$();
+    } else {
+      tmp_2 = false;
+    }
+    if (tmp_2) {
+      tmp_1 = this.get_green_is36qi_k$() === other.get_green_is36qi_k$();
+    } else {
+      tmp_1 = false;
+    }
+    if (tmp_1) {
+      tmp_0 = this.get_blue_wojj4z_k$() === other.get_blue_wojj4z_k$();
+    } else {
+      tmp_0 = false;
+    }
+    if (tmp_0) {
+      tmp = this.get_alpha_iooth1_k$() === other.get_alpha_iooth1_k$();
+    } else {
+      tmp = false;
+    }
+    return tmp;
+  };
+  protoOf(Rgb).hashCode = function () {
+    var result = this.get_red_18ix20_k$();
+    result = imul(31, result) + this.get_green_is36qi_k$() | 0;
+    result = imul(31, result) + this.get_blue_wojj4z_k$() | 0;
+    result = imul(31, result) + this.get_alpha_iooth1_k$() | 0;
+    return result;
+  };
+  function Hsl(hue, saturation, lightness, alpha) {
+    this.hue_1 = hue;
+    this.saturation_1 = saturation;
+    this.lightness_1 = lightness;
+    this.alpha_1 = alpha;
+  }
+  protoOf(Hsl).get_hue_18j435_k$ = function () {
+    return this.hue_1;
+  };
+  protoOf(Hsl).get_saturation_nzhaqt_k$ = function () {
+    return this.saturation_1;
+  };
+  protoOf(Hsl).get_lightness_jv7mx0_k$ = function () {
+    return this.lightness_1;
+  };
+  protoOf(Hsl).get_alpha_iooth1_k$ = function () {
+    return this.alpha_1;
+  };
+  protoOf(Hsl).inverted_adp911_k$ = function () {
+    return this.toRgb_1tsrpu_k$().inverted_adp911_k$();
+  };
+  protoOf(Hsl).darkened_iwrtmu_k$ = function (byPercent) {
+    return this.toRgb_1tsrpu_k$().darkened_iwrtmu_k$(byPercent);
+  };
+  protoOf(Hsl).copy_egrqb9_k$ = function (hue, saturation, lightness, alpha) {
+    return Companion_getInstance_9().hsla_rzsfr4_k$(hue, saturation, lightness, alpha);
+  };
+  protoOf(Hsl).copy$default_vnqijd_k$ = function (hue, saturation, lightness, alpha, $super) {
+    hue = hue === VOID ? this.hue_1 : hue;
+    saturation = saturation === VOID ? this.saturation_1 : saturation;
+    lightness = lightness === VOID ? this.lightness_1 : lightness;
+    alpha = alpha === VOID ? this.alpha_1 : alpha;
+    return $super === VOID ? this.copy_egrqb9_k$(hue, saturation, lightness, alpha) : $super.copy_egrqb9_k$.call(this, hue, saturation, lightness, alpha);
+  };
+  protoOf(Hsl).toRgb_1tsrpu_k$ = function () {
+    // Inline function 'kotlin.math.abs' call
+    var x = 2 * this.lightness_1 - 1;
+    var chroma = (1 - Math.abs(x)) * this.saturation_1;
+    // Inline function 'kotlin.math.abs' call
+    var x_0 = this.hue_1 / 60 % 2 - 1;
+    var intermediateValue = chroma * (1 - Math.abs(x_0));
+    var hueSection = (numberToInt(this.hue_1) % 360 | 0) / 60 | 0;
+    var r;
+    var g;
+    var b;
+    switch (hueSection) {
+      case 0:
+        r = chroma;
+        g = intermediateValue;
+        b = 0.0;
+        break;
+      case 1:
+        r = intermediateValue;
+        g = chroma;
+        b = 0.0;
+        break;
+      case 2:
+        r = 0.0;
+        g = chroma;
+        b = intermediateValue;
+        break;
+      case 3:
+        r = 0.0;
+        g = intermediateValue;
+        b = chroma;
+        break;
+      case 4:
+        r = intermediateValue;
+        g = 0.0;
+        b = chroma;
+        break;
+      default:
+        // Inline function 'kotlin.check' call
+
+        // Inline function 'kotlin.contracts.contract' call
+
+        // Inline function 'kotlin.check' call
+
+        // Inline function 'kotlin.contracts.contract' call
+
+        if (!(hueSection === 5)) {
+          // Inline function 'kotlin.check.<anonymous>' call
+          var message = 'Check failed.';
+          throw IllegalStateException_init_$Create$(toString_0(message));
+        }
+
+        r = chroma;
+        g = 0.0;
+        b = intermediateValue;
+        break;
+    }
+    var lightnessAdjustment = this.lightness_1 - chroma / 2;
+    return Companion_getInstance_9().rgba_bap9l8_k$(r + lightnessAdjustment, g + lightnessAdjustment, b + lightnessAdjustment, this.alpha_1);
+  };
+  protoOf(Hsl).toHsl_1tskli_k$ = function () {
+    return this;
+  };
+  protoOf(Hsl).toString = function () {
+    // Inline function 'kotlin.math.roundToInt' call
+    var this_0 = this.hue_1 * 10;
+    var hueRounded = roundToInt(this_0) / 10.0;
+    // Inline function 'kotlin.math.roundToInt' call
+    var this_1 = this.saturation_1 * 1000;
+    var saturationPercent = roundToInt(this_1) / 10.0;
+    // Inline function 'kotlin.math.roundToInt' call
+    var this_2 = this.lightness_1 * 1000;
+    var lightnessPercent = roundToInt(this_2) / 10.0;
+    return this.alpha_1 === 1.0 ? 'hsl(' + hueRounded + ', ' + saturationPercent + '%, ' + lightnessPercent + '%)' : 'hsla(' + hueRounded + ', ' + saturationPercent + '%, ' + lightnessPercent + '%, ' + this.alpha_1 + ')';
+  };
+  protoOf(Hsl).equals = function (other) {
+    if (this === other)
+      return true;
+    var tmp;
+    var tmp_0;
+    var tmp_1;
+    var tmp_2;
+    if (other instanceof Hsl) {
+      tmp_2 = this.hue_1 === other.hue_1;
+    } else {
+      tmp_2 = false;
+    }
+    if (tmp_2) {
+      tmp_1 = this.saturation_1 === other.saturation_1;
+    } else {
+      tmp_1 = false;
+    }
+    if (tmp_1) {
+      tmp_0 = this.lightness_1 === other.lightness_1;
+    } else {
+      tmp_0 = false;
+    }
+    if (tmp_0) {
+      tmp = this.alpha_1 === other.alpha_1;
+    } else {
+      tmp = false;
+    }
+    return tmp;
+  };
+  protoOf(Hsl).hashCode = function () {
+    var result = getNumberHashCode(this.hue_1);
+    result = imul(31, result) + getNumberHashCode(this.saturation_1) | 0;
+    result = imul(31, result) + getNumberHashCode(this.lightness_1) | 0;
+    result = imul(31, result) + getNumberHashCode(this.alpha_1) | 0;
+    return result;
+  };
+  function Companion_0() {
+    Companion_instance_0 = this;
+    this.DEFAULT_SHIFTING_PERCENT_1 = 0.3;
+  }
+  protoOf(Companion_0).get_DEFAULT_SHIFTING_PERCENT_bgdcr7_k$ = function () {
+    return this.DEFAULT_SHIFTING_PERCENT_1;
+  };
+  protoOf(Companion_0).rgb_6orfmz_k$ = function (value) {
+    return new Rgb(-16777216 | value);
+  };
+  protoOf(Companion_0).argb_u8nll8_k$ = function (value) {
+    return new Rgb(value);
+  };
+  protoOf(Companion_0).argb_v9u7oe_k$ = function (value) {
+    return this.argb_u8nll8_k$(toInRangeInt(value, this));
+  };
+  protoOf(Companion_0).rgba_idjuxo_k$ = function (value) {
+    // Inline function 'kotlin.run' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'com.varabyte.kobweb.compose.ui.graphics.Companion.rgba.<anonymous>' call
+    var alpha = (value & 255) << 24;
+    var rgb = value >> 8;
+    return this.argb_u8nll8_k$(alpha | rgb);
+  };
+  protoOf(Companion_0).rgba_dqu85i_k$ = function (value) {
+    return this.rgba_idjuxo_k$(toInRangeInt(value, this));
+  };
+  protoOf(Companion_0).rgb_udwlgr_k$ = function (r, g, b) {
+    return this.rgba_3xu3m4_k$(r, g, b, 255);
+  };
+  protoOf(Companion_0).rgba_3xu3m4_k$ = function (r, g, b, a) {
+    return new Rgb((r & 255) << 16 | (g & 255) << 8 | (b & 255) << 0 | (a & 255) << 24);
+  };
+  protoOf(Companion_0).argb_bgl9sc_k$ = function (a, r, g, b) {
+    return this.rgba_3xu3m4_k$(r, g, b, a);
+  };
+  protoOf(Companion_0).rgb_o6n8ln_k$ = function (r, g, b) {
+    return this.rgb_udwlgr_k$(toColorInt(r), toColorInt(g), toColorInt(b));
+  };
+  protoOf(Companion_0).rgba_bap9l8_k$ = function (r, g, b, a) {
+    return this.rgba_3xu3m4_k$(toColorInt(r), toColorInt(g), toColorInt(b), toColorInt(a));
+  };
+  protoOf(Companion_0).argb_eb1cjw_k$ = function (a, r, g, b) {
+    return this.rgba_bap9l8_k$(r, g, b, a);
+  };
+  protoOf(Companion_0).rgba_vsmmr0_k$ = function (r, g, b, a) {
+    return this.rgba_3xu3m4_k$(r, g, b, toColorInt(a));
+  };
+  protoOf(Companion_0).argb_g07r6c_k$ = function (a, r, g, b) {
+    return this.rgba_vsmmr0_k$(r, g, b, a);
+  };
+  protoOf(Companion_0).hsl_jlm5zd_k$ = function (h, s, l) {
+    return this.hsl_ppe4lz_k$(h, s, l);
+  };
+  protoOf(Companion_0).hsla_nhswtc_k$ = function (h, s, l, a) {
+    return this.hsla_rzsfr4_k$(h, s, l, a);
+  };
+  protoOf(Companion_0).hsl_ppe4lz_k$ = function (h, s, l) {
+    return new Hsl(h, s, l, 1.0);
+  };
+  protoOf(Companion_0).hsla_rzsfr4_k$ = function (h, s, l, a) {
+    return new Hsl(h, s, l, a);
+  };
+  protoOf(Companion_0).rgb_fpbdrf_k$ = function (r, g, b) {
+    return this.rgba_68523u_k$(r, g, b, 1.0);
+  };
+  protoOf(Companion_0).rgba_sw8yb8_k$ = function (r, g, b, a) {
+    return this.rgba_bap9l8_k$(r.value / 100.0, g.value / 100.0, b.value / 100.0, a.value / 100.0);
+  };
+  protoOf(Companion_0).rgba_68523u_k$ = function (r, g, b, a) {
+    return this.rgba_bap9l8_k$(r.value / 100.0, g.value / 100.0, b.value / 100.0, a);
+  };
+  protoOf(Companion_0).argb_3qzbuc_k$ = function (a, r, g, b) {
+    return this.argb_eb1cjw_k$(a.value / 100.0, r.value / 100.0, g.value / 100.0, b.value / 100.0);
+  };
+  protoOf(Companion_0).argb_ekqalm_k$ = function (a, r, g, b) {
+    return this.argb_eb1cjw_k$(a, r.value / 100.0, g.value / 100.0, b.value / 100.0);
+  };
+  protoOf(Companion_0).hsl_okaric_k$ = function (h, s, l) {
+    return this.hsla_sg5wgt_k$(h, s, l, 1.0);
+  };
+  protoOf(Companion_0).hsla_sg5wgt_k$ = function (h, s, l, alpha) {
+    return this.hsla_rzsfr4_k$(toDegrees(h), s.value / 100.0, l.value / 100.0, alpha);
+  };
+  protoOf(Companion_0).hsla_bcgopz_k$ = function (h, s, l, alpha) {
+    return this.hsla_sg5wgt_k$(h, s, l, alpha.value / 100.0);
+  };
+  var Companion_instance_0;
+  function Companion_getInstance_9() {
+    if (Companion_instance_0 == null)
+      new Companion_0();
+    return Companion_instance_0;
+  }
+  function Color_0() {
   }
   function Colors() {
     Colors_instance = this;
@@ -2117,411 +2513,15 @@
       new Colors();
     return Colors_instance;
   }
-  function toInRangeInt(_this__u8e3s4, $this) {
-    // Inline function 'kotlin.check' call
-    // Inline function 'kotlin.contracts.contract' call
-    if (!(new Long(0, -1)).and_4spn93_k$(_this__u8e3s4).equals(new Long(0, 0))) {
-      // Inline function 'com.varabyte.kobweb.compose.ui.graphics.Companion.toInRangeInt.<anonymous>' call
-      // Inline function 'kotlin.text.uppercase' call
-      // Inline function 'kotlin.js.asDynamic' call
-      var message = 'Got an invalid hex color (0x' + toString(_this__u8e3s4, 16).toUpperCase() + ') value larger than 0xFFFFFFFF';
-      throw IllegalStateException_init_$Create$(toString_0(message));
-    }
-    return _this__u8e3s4.toInt_1tsl84_k$();
-  }
-  function Rgb(value) {
-    this.value_1 = value;
-  }
-  protoOf(Rgb).get_value_j01efc_k$ = function () {
-    return this.value_1;
-  };
-  protoOf(Rgb).get_red_18ix20_k$ = function () {
-    return this.value_1 >> 16 & 255;
-  };
-  protoOf(Rgb).get_green_is36qi_k$ = function () {
-    return this.value_1 >> 8 & 255;
-  };
-  protoOf(Rgb).get_blue_wojj4z_k$ = function () {
-    return this.value_1 >> 0 & 255;
-  };
-  protoOf(Rgb).get_alpha_iooth1_k$ = function () {
-    return this.value_1 >> 24 & 255;
-  };
-  protoOf(Rgb).get_redf_wotlby_k$ = function () {
-    return toColorFloat(this.get_red_18ix20_k$());
-  };
-  protoOf(Rgb).get_greenf_dxud3g_k$ = function () {
-    return toColorFloat(this.get_green_is36qi_k$());
-  };
-  protoOf(Rgb).get_bluef_ip8ppf_k$ = function () {
-    return toColorFloat(this.get_blue_wojj4z_k$());
-  };
-  protoOf(Rgb).get_alphaf_b0gxxt_k$ = function () {
-    return toColorFloat(this.get_alpha_iooth1_k$());
-  };
-  protoOf(Rgb).inverted_adp911_k$ = function () {
-    return Companion_getInstance_9().rgba_3xu3m4_k$(255 - this.get_red_18ix20_k$() | 0, 255 - this.get_green_is36qi_k$() | 0, 255 - this.get_blue_wojj4z_k$() | 0, this.get_alpha_iooth1_k$());
-  };
-  protoOf(Rgb).darkened_iwrtmu_k$ = function (byPercent) {
-    // Inline function 'kotlin.require' call
-    // Inline function 'kotlin.contracts.contract' call
-    if (!(0.0 <= byPercent ? byPercent <= 1.0 : false)) {
-      // Inline function 'com.varabyte.kobweb.compose.ui.graphics.Rgb.darkened.<anonymous>' call
-      var message = 'Invalid color shifting percent. Expected between 0 and 1, got ' + byPercent;
-      throw IllegalArgumentException_init_$Create$(toString_0(message));
-    }
-    if (byPercent === 0.0)
-      return this;
-    var darkeningMultiplier = 1.0 - byPercent;
-    return Companion_getInstance_9().rgba_bap9l8_k$(this.get_redf_wotlby_k$() * darkeningMultiplier, this.get_greenf_dxud3g_k$() * darkeningMultiplier, this.get_bluef_ip8ppf_k$() * darkeningMultiplier, this.get_alphaf_b0gxxt_k$());
-  };
-  protoOf(Rgb).copy_my5h57_k$ = function (red, green, blue, alpha) {
-    return Companion_getInstance_9().rgba_3xu3m4_k$(red, green, blue, alpha);
-  };
-  protoOf(Rgb).copy$default_mtju0j_k$ = function (red, green, blue, alpha, $super) {
-    red = red === VOID ? this.get_red_18ix20_k$() : red;
-    green = green === VOID ? this.get_green_is36qi_k$() : green;
-    blue = blue === VOID ? this.get_blue_wojj4z_k$() : blue;
-    alpha = alpha === VOID ? this.get_alpha_iooth1_k$() : alpha;
-    return $super === VOID ? this.copy_my5h57_k$(red, green, blue, alpha) : $super.copy_my5h57_k$.call(this, red, green, blue, alpha);
-  };
-  protoOf(Rgb).copyf_olenlb_k$ = function (red, green, blue, alpha) {
-    return Companion_getInstance_9().rgba_bap9l8_k$(red, green, blue, alpha);
-  };
-  protoOf(Rgb).copyf$default_6pu18v_k$ = function (red, green, blue, alpha, $super) {
-    red = red === VOID ? this.get_redf_wotlby_k$() : red;
-    green = green === VOID ? this.get_greenf_dxud3g_k$() : green;
-    blue = blue === VOID ? this.get_bluef_ip8ppf_k$() : blue;
-    alpha = alpha === VOID ? this.get_alphaf_b0gxxt_k$() : alpha;
-    return $super === VOID ? this.copyf_olenlb_k$(red, green, blue, alpha) : $super.copyf_olenlb_k$.call(this, red, green, blue, alpha);
-  };
-  protoOf(Rgb).toRgb_1tsrpu_k$ = function () {
-    return this;
-  };
-  protoOf(Rgb).toHsl_1tskli_k$ = function () {
-    // Inline function 'kotlin.comparisons.maxOf' call
-    var a = this.get_redf_wotlby_k$();
-    var b = this.get_greenf_dxud3g_k$();
-    var c = this.get_bluef_ip8ppf_k$();
-    var chromaMax = Math.max(a, b, c);
-    // Inline function 'kotlin.comparisons.minOf' call
-    var a_0 = this.get_redf_wotlby_k$();
-    var b_0 = this.get_greenf_dxud3g_k$();
-    var c_0 = this.get_bluef_ip8ppf_k$();
-    var chromaMin = Math.min(a_0, b_0, c_0);
-    var chromaDelta = chromaMax - chromaMin;
-    var lightness = (chromaMin + chromaMax) / 2.0;
-    // Inline function 'kotlin.math.abs' call
-    var x = 2.0 * lightness - 1.0;
-    var saturation = chromaDelta / (1.0 - Math.abs(x));
-    var tmp;
-    if (chromaDelta === 0.0) {
-      tmp = 0.0;
-    } else {
-      var tmp_0;
-      if (chromaMax === this.get_redf_wotlby_k$()) {
-        tmp_0 = (this.get_greenf_dxud3g_k$() - this.get_bluef_ip8ppf_k$()) / chromaDelta % 6;
-      } else if (chromaMax === this.get_greenf_dxud3g_k$()) {
-        tmp_0 = (this.get_bluef_ip8ppf_k$() - this.get_redf_wotlby_k$()) / chromaDelta + 2.0;
-      } else if (chromaMax === this.get_bluef_ip8ppf_k$()) {
-        tmp_0 = (this.get_redf_wotlby_k$() - this.get_greenf_dxud3g_k$()) / chromaDelta + 4.0;
-      } else {
-        var message = 'Unexpected chromaMax value ' + chromaMax;
-        throw IllegalStateException_init_$Create$(toString_0(message));
-      }
-      tmp = 60.0 * tmp_0;
-    }
-    var hue = tmp;
-    return Companion_getInstance_9().hsla_rzsfr4_k$(hue, saturation, lightness, this.get_alphaf_b0gxxt_k$());
-  };
-  protoOf(Rgb).toString = function () {
-    return this.get_alpha_iooth1_k$() === 255 ? 'rgb(' + this.get_red_18ix20_k$() + ', ' + this.get_green_is36qi_k$() + ', ' + this.get_blue_wojj4z_k$() + ')' : 'rgba(' + this.get_red_18ix20_k$() + ', ' + this.get_green_is36qi_k$() + ', ' + this.get_blue_wojj4z_k$() + ', ' + this.get_alphaf_b0gxxt_k$() + ')';
-  };
-  protoOf(Rgb).equals = function (other) {
-    if (this === other)
-      return true;
-    var tmp;
-    var tmp_0;
-    var tmp_1;
-    var tmp_2;
-    if (other instanceof Rgb) {
-      tmp_2 = this.get_red_18ix20_k$() === other.get_red_18ix20_k$();
-    } else {
-      tmp_2 = false;
-    }
-    if (tmp_2) {
-      tmp_1 = this.get_green_is36qi_k$() === other.get_green_is36qi_k$();
-    } else {
-      tmp_1 = false;
-    }
-    if (tmp_1) {
-      tmp_0 = this.get_blue_wojj4z_k$() === other.get_blue_wojj4z_k$();
-    } else {
-      tmp_0 = false;
-    }
-    if (tmp_0) {
-      tmp = this.get_alpha_iooth1_k$() === other.get_alpha_iooth1_k$();
-    } else {
-      tmp = false;
-    }
-    return tmp;
-  };
-  protoOf(Rgb).hashCode = function () {
-    var result = this.get_red_18ix20_k$();
-    result = imul(31, result) + this.get_green_is36qi_k$() | 0;
-    result = imul(31, result) + this.get_blue_wojj4z_k$() | 0;
-    result = imul(31, result) + this.get_alpha_iooth1_k$() | 0;
-    return result;
-  };
-  function Hsl(hue, saturation, lightness, alpha) {
-    this.hue_1 = hue;
-    this.saturation_1 = saturation;
-    this.lightness_1 = lightness;
-    this.alpha_1 = alpha;
-  }
-  protoOf(Hsl).get_hue_18j435_k$ = function () {
-    return this.hue_1;
-  };
-  protoOf(Hsl).get_saturation_nzhaqt_k$ = function () {
-    return this.saturation_1;
-  };
-  protoOf(Hsl).get_lightness_jv7mx0_k$ = function () {
-    return this.lightness_1;
-  };
-  protoOf(Hsl).get_alpha_iooth1_k$ = function () {
-    return this.alpha_1;
-  };
-  protoOf(Hsl).inverted_adp911_k$ = function () {
-    return this.toRgb_1tsrpu_k$().inverted_adp911_k$();
-  };
-  protoOf(Hsl).darkened_iwrtmu_k$ = function (byPercent) {
-    return this.toRgb_1tsrpu_k$().darkened_iwrtmu_k$(byPercent);
-  };
-  protoOf(Hsl).copy_egrqb9_k$ = function (hue, saturation, lightness, alpha) {
-    return Companion_getInstance_9().hsla_rzsfr4_k$(hue, saturation, lightness, alpha);
-  };
-  protoOf(Hsl).copy$default_vnqijd_k$ = function (hue, saturation, lightness, alpha, $super) {
-    hue = hue === VOID ? this.hue_1 : hue;
-    saturation = saturation === VOID ? this.saturation_1 : saturation;
-    lightness = lightness === VOID ? this.lightness_1 : lightness;
-    alpha = alpha === VOID ? this.alpha_1 : alpha;
-    return $super === VOID ? this.copy_egrqb9_k$(hue, saturation, lightness, alpha) : $super.copy_egrqb9_k$.call(this, hue, saturation, lightness, alpha);
-  };
-  protoOf(Hsl).toRgb_1tsrpu_k$ = function () {
-    // Inline function 'kotlin.math.abs' call
-    var x = 2 * this.lightness_1 - 1;
-    var chroma = (1 - Math.abs(x)) * this.saturation_1;
-    // Inline function 'kotlin.math.abs' call
-    var x_0 = this.hue_1 / 60 % 2 - 1;
-    var intermediateValue = chroma * (1 - Math.abs(x_0));
-    var hueSection = (numberToInt(this.hue_1) % 360 | 0) / 60 | 0;
-    var r;
-    var g;
-    var b;
-    switch (hueSection) {
-      case 0:
-        r = chroma;
-        g = intermediateValue;
-        b = 0.0;
-        break;
-      case 1:
-        r = intermediateValue;
-        g = chroma;
-        b = 0.0;
-        break;
-      case 2:
-        r = 0.0;
-        g = chroma;
-        b = intermediateValue;
-        break;
-      case 3:
-        r = 0.0;
-        g = intermediateValue;
-        b = chroma;
-        break;
-      case 4:
-        r = intermediateValue;
-        g = 0.0;
-        b = chroma;
-        break;
-      default:
-        // Inline function 'kotlin.check' call
-
-        // Inline function 'kotlin.contracts.contract' call
-
-        // Inline function 'kotlin.check' call
-
-        // Inline function 'kotlin.contracts.contract' call
-
-        if (!(hueSection === 5)) {
-          // Inline function 'kotlin.check.<anonymous>' call
-          var message = 'Check failed.';
-          throw IllegalStateException_init_$Create$(toString_0(message));
-        }
-
-        r = chroma;
-        g = 0.0;
-        b = intermediateValue;
-        break;
-    }
-    var lightnessAdjustment = this.lightness_1 - chroma / 2;
-    return Companion_getInstance_9().rgba_bap9l8_k$(r + lightnessAdjustment, g + lightnessAdjustment, b + lightnessAdjustment, this.alpha_1);
-  };
-  protoOf(Hsl).toHsl_1tskli_k$ = function () {
-    return this;
-  };
-  protoOf(Hsl).toString = function () {
-    // Inline function 'kotlin.math.roundToInt' call
-    var this_0 = this.hue_1 * 10;
-    var hueRounded = roundToInt(this_0) / 10.0;
-    // Inline function 'kotlin.math.roundToInt' call
-    var this_1 = this.saturation_1 * 1000;
-    var saturationPercent = roundToInt(this_1) / 10.0;
-    // Inline function 'kotlin.math.roundToInt' call
-    var this_2 = this.lightness_1 * 1000;
-    var lightnessPercent = roundToInt(this_2) / 10.0;
-    return this.alpha_1 === 1.0 ? 'hsl(' + hueRounded + ', ' + saturationPercent + '%, ' + lightnessPercent + '%)' : 'hsla(' + hueRounded + ', ' + saturationPercent + '%, ' + lightnessPercent + '%, ' + this.alpha_1 + ')';
-  };
-  protoOf(Hsl).equals = function (other) {
-    if (this === other)
-      return true;
-    var tmp;
-    var tmp_0;
-    var tmp_1;
-    var tmp_2;
-    if (other instanceof Hsl) {
-      tmp_2 = this.hue_1 === other.hue_1;
-    } else {
-      tmp_2 = false;
-    }
-    if (tmp_2) {
-      tmp_1 = this.saturation_1 === other.saturation_1;
-    } else {
-      tmp_1 = false;
-    }
-    if (tmp_1) {
-      tmp_0 = this.lightness_1 === other.lightness_1;
-    } else {
-      tmp_0 = false;
-    }
-    if (tmp_0) {
-      tmp = this.alpha_1 === other.alpha_1;
-    } else {
-      tmp = false;
-    }
-    return tmp;
-  };
-  protoOf(Hsl).hashCode = function () {
-    var result = getNumberHashCode(this.hue_1);
-    result = imul(31, result) + getNumberHashCode(this.saturation_1) | 0;
-    result = imul(31, result) + getNumberHashCode(this.lightness_1) | 0;
-    result = imul(31, result) + getNumberHashCode(this.alpha_1) | 0;
-    return result;
-  };
-  function Companion_0() {
-    Companion_instance_0 = this;
-    this.DEFAULT_SHIFTING_PERCENT_1 = 0.3;
-  }
-  protoOf(Companion_0).get_DEFAULT_SHIFTING_PERCENT_bgdcr7_k$ = function () {
-    return this.DEFAULT_SHIFTING_PERCENT_1;
-  };
-  protoOf(Companion_0).rgb_6orfmz_k$ = function (value) {
-    return new Rgb(-16777216 | value);
-  };
-  protoOf(Companion_0).argb_u8nll8_k$ = function (value) {
-    return new Rgb(value);
-  };
-  protoOf(Companion_0).argb_v9u7oe_k$ = function (value) {
-    return this.argb_u8nll8_k$(toInRangeInt(value, this));
-  };
-  protoOf(Companion_0).rgba_idjuxo_k$ = function (value) {
-    // Inline function 'kotlin.run' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'com.varabyte.kobweb.compose.ui.graphics.Companion.rgba.<anonymous>' call
-    var alpha = (value & 255) << 24;
-    var rgb = value >> 8;
-    return this.argb_u8nll8_k$(alpha | rgb);
-  };
-  protoOf(Companion_0).rgba_dqu85i_k$ = function (value) {
-    return this.rgba_idjuxo_k$(toInRangeInt(value, this));
-  };
-  protoOf(Companion_0).rgb_udwlgr_k$ = function (r, g, b) {
-    return this.rgba_3xu3m4_k$(r, g, b, 255);
-  };
-  protoOf(Companion_0).rgba_3xu3m4_k$ = function (r, g, b, a) {
-    return new Rgb((r & 255) << 16 | (g & 255) << 8 | (b & 255) << 0 | (a & 255) << 24);
-  };
-  protoOf(Companion_0).argb_bgl9sc_k$ = function (a, r, g, b) {
-    return this.rgba_3xu3m4_k$(r, g, b, a);
-  };
-  protoOf(Companion_0).rgb_o6n8ln_k$ = function (r, g, b) {
-    return this.rgb_udwlgr_k$(toColorInt(r), toColorInt(g), toColorInt(b));
-  };
-  protoOf(Companion_0).rgba_bap9l8_k$ = function (r, g, b, a) {
-    return this.rgba_3xu3m4_k$(toColorInt(r), toColorInt(g), toColorInt(b), toColorInt(a));
-  };
-  protoOf(Companion_0).argb_eb1cjw_k$ = function (a, r, g, b) {
-    return this.rgba_bap9l8_k$(r, g, b, a);
-  };
-  protoOf(Companion_0).rgba_vsmmr0_k$ = function (r, g, b, a) {
-    return this.rgba_3xu3m4_k$(r, g, b, toColorInt(a));
-  };
-  protoOf(Companion_0).argb_g07r6c_k$ = function (a, r, g, b) {
-    return this.rgba_vsmmr0_k$(r, g, b, a);
-  };
-  protoOf(Companion_0).hsl_jlm5zd_k$ = function (h, s, l) {
-    return this.hsl_ppe4lz_k$(h, s, l);
-  };
-  protoOf(Companion_0).hsla_nhswtc_k$ = function (h, s, l, a) {
-    return this.hsla_rzsfr4_k$(h, s, l, a);
-  };
-  protoOf(Companion_0).hsl_ppe4lz_k$ = function (h, s, l) {
-    return new Hsl(h, s, l, 1.0);
-  };
-  protoOf(Companion_0).hsla_rzsfr4_k$ = function (h, s, l, a) {
-    return new Hsl(h, s, l, a);
-  };
-  protoOf(Companion_0).rgb_fpbdrf_k$ = function (r, g, b) {
-    return this.rgba_68523u_k$(r, g, b, 1.0);
-  };
-  protoOf(Companion_0).rgba_sw8yb8_k$ = function (r, g, b, a) {
-    return this.rgba_bap9l8_k$(r.value / 100.0, g.value / 100.0, b.value / 100.0, a.value / 100.0);
-  };
-  protoOf(Companion_0).rgba_68523u_k$ = function (r, g, b, a) {
-    return this.rgba_bap9l8_k$(r.value / 100.0, g.value / 100.0, b.value / 100.0, a);
-  };
-  protoOf(Companion_0).argb_3qzbuc_k$ = function (a, r, g, b) {
-    return this.argb_eb1cjw_k$(a.value / 100.0, r.value / 100.0, g.value / 100.0, b.value / 100.0);
-  };
-  protoOf(Companion_0).argb_ekqalm_k$ = function (a, r, g, b) {
-    return this.argb_eb1cjw_k$(a, r.value / 100.0, g.value / 100.0, b.value / 100.0);
-  };
-  protoOf(Companion_0).hsl_okaric_k$ = function (h, s, l) {
-    return this.hsla_sg5wgt_k$(h, s, l, 1.0);
-  };
-  protoOf(Companion_0).hsla_sg5wgt_k$ = function (h, s, l, alpha) {
-    return this.hsla_rzsfr4_k$(toDegrees(h), s.value / 100.0, l.value / 100.0, alpha);
-  };
-  protoOf(Companion_0).hsla_bcgopz_k$ = function (h, s, l, alpha) {
-    return this.hsla_sg5wgt_k$(h, s, l, alpha.value / 100.0);
-  };
-  var Companion_instance_0;
-  function Companion_getInstance_9() {
-    if (Companion_instance_0 == null)
-      new Companion_0();
-    return Companion_instance_0;
-  }
-  function Color_0() {
-  }
-  function lightened(_this__u8e3s4, byPercent) {
-    byPercent = byPercent === VOID ? 0.3 : byPercent;
-    return _this__u8e3s4.inverted_adp911_k$().darkened_iwrtmu_k$(byPercent).inverted_adp911_k$();
-  }
   function toColorFloat(_this__u8e3s4) {
     return (_this__u8e3s4 & 255) / 255.0;
   }
   function toColorInt(_this__u8e3s4) {
     return numberToInt(coerceIn(_this__u8e3s4, 0.0, 1.0) * 255.0);
+  }
+  function lightened(_this__u8e3s4, byPercent) {
+    byPercent = byPercent === VOID ? 0.3 : byPercent;
+    return _this__u8e3s4.inverted_adp911_k$().darkened_iwrtmu_k$(byPercent).inverted_adp911_k$();
   }
   function ariaHidden_0(_this__u8e3s4, value) {
     value = value === VOID ? true : value;
@@ -3022,20 +3022,14 @@
       return Unit_getInstance();
     };
   }
-  function fontFamily_0(_this__u8e3s4, values) {
-    return styleModifier(_this__u8e3s4, fontFamily$lambda(values));
-  }
   function fontWeight_0(_this__u8e3s4, value) {
     return styleModifier(_this__u8e3s4, fontWeight$lambda(value));
   }
   function fontSize_0(_this__u8e3s4, value) {
     return styleModifier(_this__u8e3s4, fontSize$lambda(value));
   }
-  function fontFamily$lambda($values) {
-    return function ($this$styleModifier) {
-      fontFamily($this$styleModifier, $values.slice());
-      return Unit_getInstance();
-    };
+  function fontFamily_0(_this__u8e3s4, values) {
+    return styleModifier(_this__u8e3s4, fontFamily$lambda(values));
   }
   function fontWeight$lambda($value) {
     return function ($this$styleModifier) {
@@ -3046,6 +3040,12 @@
   function fontSize$lambda($value) {
     return function ($this$styleModifier) {
       fontSize($this$styleModifier, $value);
+      return Unit_getInstance();
+    };
+  }
+  function fontFamily$lambda($values) {
+    return function ($this$styleModifier) {
+      fontFamily($this$styleModifier, $values.slice());
       return Unit_getInstance();
     };
   }

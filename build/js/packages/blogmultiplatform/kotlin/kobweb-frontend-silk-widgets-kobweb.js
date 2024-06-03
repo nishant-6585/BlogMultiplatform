@@ -34,7 +34,7 @@
   'use strict';
   //region block: imports
   var protoOf = kotlin_kotlin.$_$.ob;
-  var ComponentKind = kotlin_com_varabyte_kobweb_silk_foundation.$_$.p;
+  var ComponentKind = kotlin_com_varabyte_kobweb_silk_foundation.$_$.q;
   var interfaceMeta = kotlin_kotlin.$_$.qa;
   var setMetadataFor = kotlin_kotlin.$_$.pb;
   var VOID = kotlin_kotlin.$_$.e;
@@ -54,9 +54,9 @@
   var border = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.o;
   var KProperty1 = kotlin_kotlin.$_$.fc;
   var getPropertyCallableRef = kotlin_kotlin.$_$.ma;
-  var Companion_getInstance_3 = kotlin_com_varabyte_kobweb_silk_foundation.$_$.l1;
-  var base = kotlin_com_varabyte_kobweb_silk_foundation.$_$.x;
-  var addVariantBase = kotlin_com_varabyte_kobweb_silk_foundation.$_$.t;
+  var Companion_getInstance_3 = kotlin_com_varabyte_kobweb_silk_foundation.$_$.n1;
+  var base = kotlin_com_varabyte_kobweb_silk_foundation.$_$.z;
+  var addVariantBase = kotlin_com_varabyte_kobweb_silk_foundation.$_$.v;
   var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.z;
   var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.r;
   var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y;
@@ -70,7 +70,7 @@
   var Div = kotlin_org_jetbrains_compose_html_html_core.$_$.g5;
   var Companion_getInstance_6 = kotlin_com_varabyte_kobweb_kobweb_core.$_$.i;
   var prependIf = kotlin_com_varabyte_kobweb_kobweb_core.$_$.e;
-  var toModifier = kotlin_com_varabyte_kobweb_silk_foundation.$_$.z;
+  var toModifier = kotlin_com_varabyte_kobweb_silk_foundation.$_$.b1;
   var Img = kotlin_org_jetbrains_compose_html_html_core.$_$.h5;
   var Unit_getInstance = kotlin_kotlin.$_$.l4;
   var get_percent = kotlin_org_jetbrains_compose_html_html_core.$_$.u4;
@@ -79,24 +79,24 @@
   var objectFit = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.o1;
   var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a1;
   var registerRefScope = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.b2;
-  var CssStyle = kotlin_com_varabyte_kobweb_silk_foundation.$_$.r;
+  var CssStyle = kotlin_com_varabyte_kobweb_silk_foundation.$_$.t;
   var StyleVariable_0 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.f;
-  var get_link = kotlin_com_varabyte_kobweb_silk_foundation.$_$.l;
-  var get_visited = kotlin_com_varabyte_kobweb_silk_foundation.$_$.o;
-  var get_hover = kotlin_com_varabyte_kobweb_silk_foundation.$_$.k;
+  var get_link = kotlin_com_varabyte_kobweb_silk_foundation.$_$.m;
+  var get_visited = kotlin_com_varabyte_kobweb_silk_foundation.$_$.p;
+  var get_hover = kotlin_com_varabyte_kobweb_silk_foundation.$_$.l;
   var Companion_getInstance_8 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.q2;
   var textDecorationLine = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.e2;
   var color = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.u;
   var get_ColorVar = kotlin_com_varabyte_kobweb_silk_widgets.$_$.h;
-  var addVariant = kotlin_com_varabyte_kobweb_silk_foundation.$_$.u;
+  var addVariant = kotlin_com_varabyte_kobweb_silk_foundation.$_$.w;
   var Colors_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.t2;
   var get_SilkColorsStyle = kotlin_com_varabyte_kobweb_silk_widgets.$_$.c;
-  var modifyStyleBase = kotlin_com_varabyte_kobweb_silk_foundation.$_$.h1;
-  var toPalette = kotlin_com_varabyte_kobweb_silk_foundation.$_$.d1;
+  var modifyStyleBase = kotlin_com_varabyte_kobweb_silk_foundation.$_$.j1;
+  var toPalette = kotlin_com_varabyte_kobweb_silk_foundation.$_$.f1;
   var setVariable = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.a2;
-  var ColorGroup = kotlin_com_varabyte_kobweb_silk_foundation.$_$.b1;
+  var ColorGroup = kotlin_com_varabyte_kobweb_silk_foundation.$_$.d1;
   var classMeta = kotlin_kotlin.$_$.ea;
-  var MutablePalette = kotlin_com_varabyte_kobweb_silk_foundation.$_$.c1;
+  var MutablePalette = kotlin_com_varabyte_kobweb_silk_foundation.$_$.e1;
   var KMutableProperty1 = kotlin_kotlin.$_$.dc;
   //endregion
   //region block: pre-declaration

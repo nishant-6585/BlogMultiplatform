@@ -56,6 +56,7 @@
   var charSequenceLength = kotlin_kotlin.$_$.da;
   var toString = kotlin_kotlin.$_$.rb;
   var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.m1;
+  var interfaceMeta = kotlin_kotlin.$_$.qa;
   var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.f2;
   var endsWith = kotlin_kotlin.$_$.sc;
   var startsWith = kotlin_kotlin.$_$.ld;
@@ -65,7 +66,6 @@
   var composableLambda = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b;
   var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w;
   var Span = kotlin_org_jetbrains_compose_html_html_core.$_$.j5;
-  var interfaceMeta = kotlin_kotlin.$_$.qa;
   var registerRefScope = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.c2;
   var Text = kotlin_org_jetbrains_compose_html_html_core.$_$.l5;
   var ArrayList_init_$Create$_0 = kotlin_kotlin.$_$.k;
@@ -659,6 +659,8 @@
     return SpanTextStyle;
   }
   var SpanTextStyle;
+  function SpanTextKind() {
+  }
   function SpanText(text, modifier, variant, ref, $composer, $changed, $default) {
     _init_properties_SpanText_kt__upt1hl();
     var modifier_0 = {_v: modifier};
@@ -745,8 +747,6 @@
     else {
       tmp0_safe_receiver.updateScope_t8jcf_k$(SpanText$lambda_0(text, modifier_0, variant_0, ref_0, $changed, $default));
     }
-  }
-  function SpanTextKind() {
   }
   function SpanTextStyle$lambda($this$CssStyle) {
     _init_properties_SpanText_kt__upt1hl();
@@ -3478,6 +3478,9 @@
   function get_visited(_this__u8e3s4) {
     return new OfPseudoClass(_this__u8e3s4, 'visited');
   }
+  function get_focus(_this__u8e3s4) {
+    return new OfPseudoClass(_this__u8e3s4, 'focus');
+  }
   function set__SilkTheme(_set____db54di) {
     _SilkTheme = _set____db54di;
   }
@@ -5988,39 +5991,41 @@
   _.$_$.g = get_ariaDisabled;
   _.$_$.h = get_ariaInvalid;
   _.$_$.i = get_disabled;
-  _.$_$.j = get_focusVisible;
-  _.$_$.k = get_hover;
-  _.$_$.l = get_link;
-  _.$_$.m = not;
-  _.$_$.n = get_placeholder;
-  _.$_$.o = get_visited;
-  _.$_$.p = ComponentKind;
-  _.$_$.q = Base;
-  _.$_$.r = CssStyle_0;
-  _.$_$.s = CssStyle_2;
-  _.$_$.t = addVariantBase;
-  _.$_$.u = addVariant_0;
-  _.$_$.v = base_1;
-  _.$_$.w = base_0;
-  _.$_$.x = base;
-  _.$_$.y = toModifier_1;
-  _.$_$.z = toModifier_0;
-  _.$_$.a1 = toModifier;
-  _.$_$.b1 = ColorGroup;
-  _.$_$.c1 = MutablePalette;
-  _.$_$.d1 = toPalette;
-  _.$_$.e1 = suffixedWith;
-  _.$_$.f1 = clip;
-  _.$_$.g1 = get_SilkTheme;
-  _.$_$.h1 = modifyStyleBase;
-  _.$_$.i1 = prepareSilkFoundation;
-  _.$_$.j1 = Base_init_$Init$;
-  _.$_$.k1 = RectF_init_$Create$_2;
-  _.$_$.l1 = Companion_getInstance_8;
-  _.$_$.m1 = Companion_getInstance_12;
-  _.$_$.n1 = Blue_getInstance;
-  _.$_$.o1 = Gray_getInstance;
-  _.$_$.p1 = Red_getInstance;
+  _.$_$.j = get_focus;
+  _.$_$.k = get_focusVisible;
+  _.$_$.l = get_hover;
+  _.$_$.m = get_link;
+  _.$_$.n = not;
+  _.$_$.o = get_placeholder;
+  _.$_$.p = get_visited;
+  _.$_$.q = ComponentKind;
+  _.$_$.r = Base;
+  _.$_$.s = CssStyle_1;
+  _.$_$.t = CssStyle_0;
+  _.$_$.u = CssStyle_2;
+  _.$_$.v = addVariantBase;
+  _.$_$.w = addVariant_0;
+  _.$_$.x = base_1;
+  _.$_$.y = base_0;
+  _.$_$.z = base;
+  _.$_$.a1 = toModifier_1;
+  _.$_$.b1 = toModifier_0;
+  _.$_$.c1 = toModifier;
+  _.$_$.d1 = ColorGroup;
+  _.$_$.e1 = MutablePalette;
+  _.$_$.f1 = toPalette;
+  _.$_$.g1 = suffixedWith;
+  _.$_$.h1 = clip;
+  _.$_$.i1 = get_SilkTheme;
+  _.$_$.j1 = modifyStyleBase;
+  _.$_$.k1 = prepareSilkFoundation;
+  _.$_$.l1 = Base_init_$Init$;
+  _.$_$.m1 = RectF_init_$Create$_2;
+  _.$_$.n1 = Companion_getInstance_8;
+  _.$_$.o1 = Companion_getInstance_12;
+  _.$_$.p1 = Blue_getInstance;
+  _.$_$.q1 = Gray_getInstance;
+  _.$_$.r1 = Red_getInstance;
   //endregion
   return _;
 }));
